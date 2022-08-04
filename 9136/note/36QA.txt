@@ -1,0 +1,155 @@
+9136问题
+
+1.会让你登录一下 然后问你admin那里注册是怎么实现的之类的
+admin是在哪注册的
+>>
+main.py
+admin = Admin(-1, 'ccc', 'password')
+admin.register_admin()
+读取user_admin.txt 生成 admin_list， 用户名如果不在则计时器+1，最后比较计时器如果跟list长度相等则写入id name password
+
+2.要是没有txt文件会直接报错，加入合适的validation
+>> open("./data/result/user_admin.txt",'a+'
+'a+' —— if not exist then create
+
+3.哪几个file继承User
+>>admin,Instructor,Student
+
+4.oop
+>>object-oriented programming is an approach for modeling concrete, real-world things,
+like student has id name password 
+
+5.inherent
+>> define a class that inherits all the methods and properties from another class.
+like student class use Course().find_course_by_id to find course
+
+
+6.正则让我解释比如.*?啥意思吧(还有常用的一些字符，中括号，小括号，大括号，为什么要用group之类的)
+>>
+ . means “any character” 
+ * means “anything before this symbol repeated any number of times.” 
+ (.*) they mean “any symbol any number of times.” 
+ ? symbol after .* and some other RegEx sequences means “match as little as possible.”
+ 
+( ) $ — Capture Groups we want
+
+"id": (\d+?),
+ \d:digit match any digit inside the quation mark
+
+ course_content_length = re.findall(r'"content_info_short":"(.*?)",', line)
+course_content_length = [re.search(r'\d+[\.\d]*', time).group() for time in course_content_length]
+
+7.poly morphism
+>>Polymorphism in python defines methods in the child class that have the same name as the methods in the parent class.
+like user class has view_courses(self,args=[]) method that can be user in admin class student class and  instructor class
+
+8.override，call parent method
+>>
+In Python method overriding occurs simply defining in the child class a method with the same name of a method in the parent class. When you define a method in the object you make the latter able to satisfy that method call, so the implementations of its ancestors do not come in play.
+在 Python 中，方法覆盖只是在子类中定义一个与父类中的方法同名的方法。当您在对象中定义一个方法时，您使后者能够满足该方法调用，因此其祖先的实现不会发挥作用。
+user class has view_courses(self,args=[]) method and it can search all course
+but in student class and  instructor class they only can search limit course
+
+9. __init__() Function
+>>
+Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created
+
+class Review:
+ def __init__(self, _id=-1, content="",rating=-1.0,course_id=-1):
+        self._id = _id
+        self.content = content
+        self.rating = rating
+        self.course_id= course_id
+
+then
+ def find_review_by_id(self, review_id):
+
+10.如何extect review
+>>
+with open("./data/result/review.txt", "r", encoding='utf-8') as review_file:
+	review_list = [line.strip().split(';;;') for line in review_file.readlines()]
+ for review in review_list:
+	  if review_id == review[0]:
+		  return Review(review[0], review[1], review[2], review[3])
+		  
+admin class
+def extract_review_info(self):
+        review_info = []
+        # find review_data file path
+        for file in os.listdir('./data/review_data'):
+            review_path = './data/review_data/' + file
+			  
+
+11.__str__函数
+>>
+The __str__ method in Python represents the class objects as a string – it can be used for classes. The __str__ method should be defined in a way that is easy to read and output
+
+def __str__(self):
+	text = f'Review id: {self._id}\nReview content: {self.content}\n' \
+		   f'Review rating: {self.rating}\nCourse id: {self.course_id}\n'
+	return text
+	
+
+12.args=[]
+>>admin class
+if args[0] == 'TITLE_KEYWORD':
+	course_list = Course.find_course_by_title_keyword(self,args[1])
+elif args[0] == 'ID':
+                course_list = Course.find_course_by_id(self,args[1])
+ elif args[0] == 'INSTRUCTOR_ID':
+                course_list = Course.find_course_by_instructor_id(self,args[1])
+				
+				
+13.TRY EXCEPT
+>>
+try:
+  print("Hello")
+except:
+  print("Something went wrong")
+else:
+  print("Nothing went wrong")
+  
+14.overload
+Python does not support function overloading. When we define multiple functions with the same name, the later one always overrides the prior 
+
+
+15.Admin class logic
+ def register_admin(self)
+ 
+ def extract_course_info(self):
+ 
+ def extract_review_info(self):
+ 
+ def extract_students_info(self):
+ 
+ def extract_instructor_info(self):
+ 
+  def view_users(self):
+  
+ def view_reviews(self,args=[]):
+ 
+
+
+16.main class logic
+>>
+if __name__ == "__main__"
+
+admin.register_admin()
+
+main() to login(get login_result, login_user_role, login_user_info)
+then creat admin/student/instructor object
+
+show_menu(login_user_role)
+
+def process_operations(user_object):
+get input string to call different method(view_courses)
+
+
+
+17.if __name__ == "__main__":
+>>
+the command line below only used in Main.py
+to start the program 
+# print a welcome message # manually register admin # main() method
+in Main.py
+

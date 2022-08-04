@@ -1,0 +1,4 @@
+Venice,Rome,2,500
+Rome,Milan,3,400
+Milan,Geneva,4,700
+Geneva,Hamburg,4,650

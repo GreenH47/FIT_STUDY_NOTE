@@ -1,0 +1,4 @@
+high,pitching,pitch project idea to potential sponsor,Fred
+midium,analyzing,analysing how much effort is required to complete the project,Helen
+high,prototyping,create prototype to prove project feasibility,Celine
+low,funding,acquire funding for the project,Wendy

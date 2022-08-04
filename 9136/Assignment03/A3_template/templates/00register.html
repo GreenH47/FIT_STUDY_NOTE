@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <main class="form-signin text-center">
+        <form class="col-sm-6 offset-sm-3 reg-wrap">
+            <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+            <!-- student code start -->
+            <label  for="username">Username:</label>
+            <input type="text" id="username">
+            <br/>
+            <label  for="password">Password:</label>
+            <input type="password" id="password">
+            <br/>
+            <label  for="email">Email:</label>
+            <input type="text" id="email">
+            <!-- student code end -->
+            <div class="form-floating">
+                <select class="form-select" id="role">
+                    <option value="student" selected="selected">student</option>
+                    <option value="instructor">instructor</option>
+                </select>
+                <label for="role">Role</label>
+            </div>
+
+            <br/>
+
+            <button class="w-100 btn btn-lg btn-primary do-reg" type="button">Register</button><br/><br/>
+            <a href="/user/login" class="w-100 btn btn-lg btn-secondary">Back</a>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+        </form>
+    </main>
+
+</div>
+<script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script>
+    var user_reg_ops = {
+        init: function () {
+            this.eventBind();
+        },
+        eventBind: function () {
+            $(".reg-wrap .do-reg").click(function () {
+                var btn_target = $(this);
+                if (btn_target.hasClass("disabled")) {
+                    alert("processing, please do not click multiple times");
+                    return;
+                }
+                var username = $("#username").val();
+                var password = $("#password").val();
+                var email = $("#email").val();
+                var role = $("#role").val();
+                console.log(username);
+                console.log(password);
+                console.log(email);
+                console.log(role);
+
+
+                btn_target.addClass("disabled");
+                $.ajax({
+                    url: "/user/register",
+                    type: "POST",
+                    data: {
+                        username: username,
+                        password: password,
+                        email: email,
+                        role: role,
+                        register_time: new Date().getTime().toString()
+                    },
+                    dataType: 'json',
+                    success: function (res) {
+                        console.log(res)
+                        btn_target.removeClass("disabled");
+
+                        if (res.code == 200) {
+                            alert(res.msg);
+                            window.location.href = "/user/login";
+                        } else {
+                            alert(res.msg);
+                        }
+                    }
+                });
+            });
+        }
+    };
+    $(document).ready(function () {
+        user_reg_ops.init();
+    });
+</script>
+</body>
+
+</html>

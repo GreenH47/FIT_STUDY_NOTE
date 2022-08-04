@@ -1,0 +1,9 @@
+.idea
+.venv
+data
+/test.py
+*/*/*/__pycache__/
+*/*/__pycache__/
+*/__pycache__/
+*.pyc
+/test2.py

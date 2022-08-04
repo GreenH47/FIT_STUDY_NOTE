@@ -1,0 +1,99 @@
+群公告
+Assignment 2 重要提示‼
+1. 理解Array && ArrayList 不同 + 增删改查CRUD + 范围
+Array is a fixed length data structure whereas ArrayList is a variable length Collection class. ArrayList, it can only store objects
+
+Methods of Creating Arrays
+In Java, the following are two different ways to create an array. 
+
+Simple fixed-sized arrays
+Dynamically sized arrays
+int arr[] = new int[10] 
+
+Now let us dwell on the next concept of ArrayList that is as follows 
+Syntax: Declaring an Arraylist
+Arraylist<Type> al = new ArrayList<Type> ;
+
+2. static field and method用法，为什么用
+ To make a static field, you simply place the static keyword before the declaration of a class’s member variable, or field:
+
+public class Human {
+    public static int numHumans = 7;
+    ...
+}
+
+ public static int getNumHumans(){
+        return numHumans;
+    }
+
+3. for each loop /while /for loop，4种loop的写法，必要时候掌握迭代iterator的写法
+// create an array
+int[] numbers = {3, 9, 5, -5};
+
+// for each loop 
+for (int number: numbers) {
+  System.out.println(number);
+}
+	
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+Statement 1 is executed (one time) before the execution of the code block.
+Statement 2 defines the condition for executing the code block.
+Statement 3 is executed (every time) after the code block has been executed.
+
+4. 理解file IO读取
+Following constructor takes a file name as a string to create an input stream object to read the file −
+
+InputStream f = new FileInputStream("C:/java/hello");
+
+Following constructor takes a file object to create an input stream object to read the file. First we create a file object using File() method as follows −
+
+File f = new File("C:/java/hello");
+InputStream f = new FileInputStream(f);
+
+
+Following constructor takes a file name as a string to create an input stream object to write the file −
+
+OutputStream f = new FileOutputStream("C:/java/hello")
+Following constructor takes a file object to create an output stream object to write the file. First, we create a file object using File() method as follows −
+
+File f = new File("C:/java/hello");
+OutputStream f = new FileOutputStream(f);
+
+5. 理解try catch exception
+try {
+  //  Block of code to try
+}
+catch(Exception e) {
+  //  Block of code to handle errors
+}
+
+The throw statement allows you to create a custom error.
+if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+
+
+6. logic explanation - class definition - method definition - line definition - expression definition (这行/段/方法/类是干什么用的，删了会引起什么后果)
+
+
+7. comment 所有的class/method/loop必须有注释
+
+
+8. code format 代码格式，换行，空格
+
+
+9. class template， 每个class都要有default-cons/non-default cons/get/set/display 方法
+
+
+10. test whale，仿照week7，要有Test Plan + actual test
+
+
+

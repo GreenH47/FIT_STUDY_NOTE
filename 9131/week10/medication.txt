@@ -1,0 +1,3 @@
+Lomotil,Diphenoxylate Hydrochloride,20.0,Atropine Suphate,10.0
+Cenovis Multi Vitamins,Calcium,80.0,Zinc,15.0,Folic Acid,0.3,Boron,1.0
+Mega Zinc 40mg,Zinc Amino Acid Chelate,200.0,Pyridoxine Hydrochloride,20.0,Betacarotene,3.0

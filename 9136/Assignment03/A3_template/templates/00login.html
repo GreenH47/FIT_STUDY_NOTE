@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet"/>
+</head>
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+<body>
+<div class="container">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <main class="form-signin text-center">
+        <form class="col-sm-6 offset-sm-3">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+            <!-- student code start -->
+            <label  for="username">Username:</label>
+            <input type="text" id="username">
+            <br/>
+            <label  for="password">Password:</label>
+            <input type="password" id="password">
+
+            <!-- student code end -->
+            <br/>
+            <button class="w-100 btn btn-lg btn-primary" id="loginbtn" type="button">Sign in</button>
+
+            <p>No account? Please register <a href="/user/register">here</a></p>
+
+            <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+        </form>
+    </main>
+</div>
+<script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script>
+    var user_login_ops = {
+        init: function () {
+            this.eventBind();
+        },
+        eventBind: function () {
+            $("#loginbtn").click(function () {
+                var btn_target = $(this);
+                if (btn_target.hasClass("disabled")) {
+                    alert("processing, please do notclick mulitple times");
+                    return;
+                }
+                var username = $("#username").val();
+                var password = $("#password").val();
+                console.log(username);
+                console.log(password);
+                if (username == undefined || username.length < 1) {
+                    alert("please enter username");
+                    return;
+                }
+
+                btn_target.addClass("disabled");
+
+                $.ajax({
+                    url: "/user/login",
+                    type: "POST",
+                    data: {
+                        username: username,
+                        password: password
+                    },
+                    dataType: "json",
+                    success: function (res) {
+                        btn_target.removeClass("disabled");
+
+                        if (res.code == 200) {
+                            alert(res.msg);
+                            window.location.href = "/";
+                        } else {
+                            alert(res.msg);
+                        }
+                    }
+                });
+            });
+        }
+    };
+    $(document).ready(function () {
+        user_login_ops.init()
+    });
+</script>
+</body>
+
+</html>
