@@ -8,8 +8,9 @@
 [SQL NOTE TILL WEEK 8](https://github.com/GreenH47/FIT_STUDY_NOTE/blob/main/9132/9132review.md)
 [SQL MOCK EXAM SOLUTION](https://github.com/GreenH47/FIT_STUDY_NOTE/blob/main/9132/SQL%20FINAL.md)
 ### FIT 9136  
-[PYTHON WEEKLY CODE Repository](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/9136)
-[PYTHON DRAFT NOTE]https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/9136/note)
+[PYTHON WEEKLY CODE Repository](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/9136)  
+
+[PYTHON DRAFT NOTE](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/9136/note)
 
   
 ### FIT 9137  
@@ -17,13 +18,13 @@
 
 ## 2022 SEMSTER 2
 ### FIT5032  
- FRONT END  
+[ FRONT END Repository](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/5032)
 
 ### FIT5057  
-PROJECT  MANAGEMENT  
+[ PROJECT  MANAGEMENT Repository](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/5057)  
 
 ### FIT5136  
-SOFTWARE ENGINERING
+[ SOFTWARE ENGINERING Repository](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/5136)  
 
 ### FIT5143  
 IT RESEARCH METHOD
