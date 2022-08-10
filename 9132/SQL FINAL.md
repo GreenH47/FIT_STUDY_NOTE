@@ -1,5 +1,5 @@
 # SQL FINAL
-![](9132/pic/Pasted%20image%2020220808232042.png)
+![](pic/Pasted%20image%2020220808232042.png)
 
 
 

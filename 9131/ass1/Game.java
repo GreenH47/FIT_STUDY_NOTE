@@ -3,9 +3,6 @@ import java.util.Random;
 import java.lang.Math;
 /**
  * Class which The Game class will manage the playing of a game
- *
- * @author Shixin Huang
- * @Last modified 20220413
  */
 public class Game
 {

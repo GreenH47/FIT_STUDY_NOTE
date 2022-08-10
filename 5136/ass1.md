@@ -5,8 +5,8 @@
 
 # Task 1: User stories and acceptance criteria
 User stories are short, simple descriptions of a feature told from the perspective of the person who desires  the new capability. Acceptance criteria are a set of statements, each with a clear pass/fail result, that specify  both functional and non-functional requirements
-![](5136/pic/FIT5136_Informal_Client_Requirements_V6.2.pdf)
-![](5136/pic/FIT5136%20-%20Assignment%201%20%20Requirements%20-%20Detailed%20Assessment%20Info.pdf)
+![](pic/FIT5136_Informal_Client_Requirements_V6.2.pdf)
+![](pic/FIT5136%20-%20Assignment%201%20%20Requirements%20-%20Detailed%20Assessment%20Info.pdf)
 ## 1.1. Identify all the features 
 based on information provided on both Informal client Requirements and  ED forum interview
 ### Feature 1 Customer Registration/ Login / Logout REQ & QA

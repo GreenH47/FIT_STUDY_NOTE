@@ -5,8 +5,6 @@ import java.lang.Math;
  * Class which The Player class will specify 
  *the attributes and behaviours of a player.
  *
- * @author Shixin Huang
- * @Last modified 20220408
  */
 
 public class Player

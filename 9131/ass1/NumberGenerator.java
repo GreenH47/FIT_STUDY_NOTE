@@ -5,8 +5,6 @@ import java.lang.Math;
 /**
  * Class which  generate a random number from 1 to a maximum value specified.
  *
- * @author Shixin Huang
- * @Last modified 20220328
  */
 
 public class NumberGenerator
