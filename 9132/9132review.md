@@ -21,27 +21,27 @@ Physical Model
 ### ER diagram
 
 ### Entities
-![](9132/pic/Pasted%20image%2020220806112433.png)
-![](9132/pic/Pasted%20image%2020220806112439.png)
+![](pic/Pasted%20image%2020220806112433.png)
+![](pic/Pasted%20image%2020220806112439.png)
 #### Strong Entity
 Has a key which may be defined without reference to other entities  
-![](9132/pic/Pasted%20image%2020220806105104.png)
+![](pic/Pasted%20image%2020220806105104.png)
 ####  Weak Entity
 Has a key which requires the existence of one or more other entities.  
 For example FAMILY entity - need to include the key of employee to create a suitable key for family
-![](9132/pic/Pasted%20image%2020220806105116.png) 
+![](pic/Pasted%20image%2020220806105116.png) 
 
 ### Relationship
 #### Identifying
  ▪  Identifier of A is part of identifier of B
 ▪  Shown with solid line
 ▪  ENROLMENT - STUDENT Enrolment key includes student id,which is an identifier of student.  
-![](9132/pic/Pasted%20image%2020220806111134.png)
+![](pic/Pasted%20image%2020220806111134.png)
 #### Non-identifying 
 ▪ Identifier of A is NOT part of identifier of B.
 ▪ Shown with broken line
 ▪ Department no (identifier of department) is not part of Employee’s identifier
-![](9132/pic/Pasted%20image%2020220806111233.png)
+![](pic/Pasted%20image%2020220806111233.png)
 
 ### Attributes
 #### Simple
@@ -67,19 +67,19 @@ Can be derived with algorithm
 #### Multivalued Attribute
 An attribute that has a list of values.
 Car colour may consist of body colour, trim colour, bumper colour.
-![](9132/pic/Pasted%20image%2020220806112159.png)
+![](pic/Pasted%20image%2020220806112159.png)
 
 ### ERD 
 #### Step 1 Identify Main Entities
-![|](9132/pic/Pasted%20image%2020220806115657.png)
+![|](pic/Pasted%20image%2020220806115657.png)
 #### STEP 2: Identify the relationships which exist between these entities  
 (remember to add an appropriate verb)
-![](9132/pic/Pasted%20image%2020220806115801.png)
+![](pic/Pasted%20image%2020220806115801.png)
 #### Step 3 Add Non-Key Attributes
-![](9132/pic/Pasted%20image%2020220806115908.png)
+![](pic/Pasted%20image%2020220806115908.png)
 #### 
 ### Exercise answer
-![](9132/pic/Week%202%20Pre-Workshop%20Quiz%20-%20Conceptual%20Modelling_%20Attempt%20review.pdf)
+![](pic/Week%202%20Pre-Workshop%20Quiz%20-%20Conceptual%20Modelling_%20Attempt%20review.pdf)
 
 # WEEK 3 Relational Database Model
 • Explain the relational model and its components
@@ -142,7 +142,7 @@ A candidate key (CK) of a relation R is an attribute or set of attributes which 
 ==One candidate key is chosen to be the primary key (PK) of a relation==
 ==preferably a single attribute, preferably numeric==
 
-![](9132/pic/Pasted%20image%2020220806202340.png)
+![](pic/Pasted%20image%2020220806202340.png)
 
 ### Null
 NULL is NOT a value - is a representation of the fact that there is NO VALUE
@@ -183,33 +183,33 @@ Primary key value must not be NULL.
 • intersection  • difference  • division
 
 ### PROJECT 𝝿
-![](9132/pic/Pasted%20image%2020220806204705.png)
+![](pic/Pasted%20image%2020220806204705.png)
 
 ### SELECT 𝝈
-![](9132/pic/Pasted%20image%2020220806204924.png)
+![](pic/Pasted%20image%2020220806204924.png)
 
 ### Multiple Actions
-![](9132/pic/Pasted%20image%2020220806205008.png)
+![](pic/Pasted%20image%2020220806205008.png)
 
 ### NATURAL JOIN
 Step 1: STUDENT X MARK
-![](9132/pic/Pasted%20image%2020220806232849.png)
+![](pic/Pasted%20image%2020220806232849.png)
 
 Step 2: delete rows where IDs do not match (select =)
-![](9132/pic/Pasted%20image%2020220806232925.png)
+![](pic/Pasted%20image%2020220806232925.png)
 
 Step 3: delete duplicate columns (project away)
-![](9132/pic/Pasted%20image%2020220806233016.png)
+![](pic/Pasted%20image%2020220806233016.png)
 
 ### UNION, INTERSECT, DIFFERENCE
-![](9132/pic/Pasted%20image%2020220807150652.png)
+![](pic/Pasted%20image%2020220807150652.png)
 
 ## quiz and exercise
-![](9132/pic/Pasted%20image%2020220807150820.png)
-![](9132/pic/Pasted%20image%2020220807150832.png)
-![](9132/pic/Pasted%20image%2020220807150841.png)
-![](9132/pic/Pasted%20image%2020220807150854.png)
-![](9132/pic/Week%203%20Pre-Workshop%20Quiz%20-%20Relational%20Model_%20Attempt%20review.pdf)
+![](pic/Pasted%20image%2020220807150820.png)
+![](pic/Pasted%20image%2020220807150832.png)
+![](pic/Pasted%20image%2020220807150841.png)
+![](pic/Pasted%20image%2020220807150854.png)
+![](pic/Week%203%20Pre-Workshop%20Quiz%20-%20Relational%20Model_%20Attempt%20review.pdf)
 
 
 # week 4 Normalisation
@@ -286,7 +286,7 @@ occurs when Y depends on X, and Z depends on Y - thus Z also depends on  X ie. X
 
 ## Normal Form
 ### UNF 
-![](9132/pic/Pasted%20image%2020220808140834.png)
+![](pic/Pasted%20image%2020220808140834.png)
 
 ### 1NF
 A RELATION IS IN FIRST NORMAL FORM (1NF)  IF:  
@@ -305,15 +305,15 @@ A RELATION IS IN FIRST NORMAL FORM (1NF)  IF:
 标识重复组的唯一标识符。 
 删除任何重复组以及主要关系的 PK。 
 删除重复组产生的新关系的 PK 通常会有一个复合 PK，由主关系的 PK 和上面 1. 中选择的唯一标识符组成，
-![](9132/pic/Pasted%20image%2020220808141625.png)
-![](9132/pic/Pasted%20image%2020220808141637.png)
+![](pic/Pasted%20image%2020220808141625.png)
+![](pic/Pasted%20image%2020220808141637.png)
 
 ### 1NF to 2NF
 all non key attributes are functionally dependent on the primary key  
 – all non key attributes are functionally dependent on any candidate  key 
 所有非键属性在功能上依赖于主键
 所有非键属性在功能上依赖于任何候选键
-![](9132/pic/Pasted%20image%2020220808142410.png)
+![](pic/Pasted%20image%2020220808142410.png)
 
 ### 2NF to 3NF
 Move from 2NF to 3NF by removing transitive dependencies  
@@ -321,7 +321,7 @@ Move from 2NF to 3NF by removing transitive dependencies
 – The determinant will be an attribute in both the original and new  relations (it will become a PK / FK relationship)  
 – Assign the determinant to be the PK of the new relation
 删除传递依赖从 2NF 移动到 3NF——将具有传递依赖的属性删除到新关系中。 – 行列式将是原始关系和新关系中的属性（它将成为 PK / FK 关系） – 将行列式分配为新关系的 PK
-![](9132/pic/Pasted%20image%2020220808144456.png)
+![](pic/Pasted%20image%2020220808144456.png)
 
 ### summary
   
@@ -332,16 +332,16 @@ UNF 到 1NF 定义 PK 并删除重复组。
 1NF 到 2NF 消除部分依赖。
 2NF 到 3NF 消除了传递依赖。==
 
-![](9132/pic/Pasted%20image%2020220808145302.png)
-![](9132/pic/Pasted%20image%2020220808145308.png)
-![](9132/pic/Pasted%20image%2020220808145315.png)
-![](9132/pic/Pasted%20image%2020220808145323.png)
-![](9132/pic/Pasted%20image%2020220808145330.png)
+![](pic/Pasted%20image%2020220808145302.png)
+![](pic/Pasted%20image%2020220808145308.png)
+![](pic/Pasted%20image%2020220808145315.png)
+![](pic/Pasted%20image%2020220808145323.png)
+![](pic/Pasted%20image%2020220808145330.png)
 
 ## exercise
 
-![](9132/pic/FIT9132%20Week%204%20Applied%20Class%20Sample%20Solution.pdf)
-![](9132/pic/Week%204%20Pre-Workshop%20Quiz%20-%20Normalisation_%20Attempt%20review.pdf)
+![](pic/FIT9132%20Week%204%20Applied%20Class%20Sample%20Solution.pdf)
+![](pic/Week%204%20Pre-Workshop%20Quiz%20-%20Normalisation_%20Attempt%20review.pdf)
 
 # week 5 Logical Modelling
 Define the steps taken to map an ER diagram to a relational model
@@ -373,20 +373,20 @@ Essentially
 – Map ternary relationships
 
 ### Mapping a Composite Attribute
-![](9132/pic/Pasted%20image%2020220808155511.png)
+![](pic/Pasted%20image%2020220808155511.png)
 
 ### Mapping a Multi valued Attribute
-![](9132/pic/Pasted%20image%2020220808155548.png)
+![](pic/Pasted%20image%2020220808155548.png)
 
 ### Mapping a Weak Entity
 For each weak entity type, create a new relation and include all of the simple  attributes as attributes of this relation. The PK of the identifying relation is  also included as the FK in this new relation
 
-![](9132/pic/Pasted%20image%2020220808155955.png)
+![](pic/Pasted%20image%2020220808155955.png)
 
 ### Mapping a 1:M Binary Relationship
 For each 1:M binary relationship, first create a relation for each of the  two entity types participating in the relationship. Then include the PK  attribute (or attributes) of the entity on the one-side of the relationship  as the FK on the many-side of the relationship
 对于每个 1:M 二元关系，首先为参与该关系的两个实体类型中的每一个创建一个关系。然后将实体的PK属性（或属性）包含在关系的一侧作为关系的多侧的FK
-![](9132/pic/Pasted%20image%2020220808160209.png)
+![](pic/Pasted%20image%2020220808160209.png)
 
 
 ### Mapping a M:N Binary Relationship
@@ -395,20 +395,20 @@ First create a relation for each of the two entity types participating in the re
 – If there are any nonkey attributes associated with the M:N relationship, they  are also included in the new relation.  
 首先为参与关系的两个实体类型中的每一个创建一个关系。 – 然后创建一个新关系，并将两个参与实体类型中的每一个的 PK 属性（或多个属性）作为外键属性包括在内。这些属性成为新关系的PK。 – 如果有任何与 M:N 关系关联的非关键属性，它们也包含在新关系中。 
 
-![](9132/pic/Pasted%20image%2020220808160647.png)
-![](9132/pic/Pasted%20image%2020220808160738.png)
+![](pic/Pasted%20image%2020220808160647.png)
+![](pic/Pasted%20image%2020220808160738.png)
 
 ### Mapping an associative entity with an Identifier
-![](9132/pic/Pasted%20image%2020220808161115.png)
+![](pic/Pasted%20image%2020220808161115.png)
 
 ### Mapping a 1:M Unary Relationship
-![](9132/pic/Pasted%20image%2020220808161558.png)
+![](pic/Pasted%20image%2020220808161558.png)
 
 ### Mapping a M:N Unary Relationship
-![](9132/pic/Pasted%20image%2020220808161705.png)
+![](pic/Pasted%20image%2020220808161705.png)
 
 ## exercise
-![](9132/pic/FIT9132%20Week%205%20Applied%20Class%20Sample%20Solution-V2.pdf)
+![](pic/FIT9132%20Week%205%20Applied%20Class%20Sample%20Solution-V2.pdf)
 
 
 # week6 Creating & Populating the Database
@@ -418,10 +418,10 @@ Use SQL Developer - Data Modeler to draw a logical level ER diagram, map it to t
 
 ## CREATE A TABLE (DDL)
 
-![](9132/pic/Pasted%20image%2020220808183708.png)
+![](pic/Pasted%20image%2020220808183708.png)
 
 ### Alternative (BETTER) method of defining FKs
-![](9132/pic/Pasted%20image%2020220808184017.png)
+![](pic/Pasted%20image%2020220808184017.png)
 
 ### ALTER TABLE
 Used to change a tables structure.  
@@ -430,14 +430,14 @@ Used to change a tables structure.
 – Removing column(s).  
 – Adding constraint(s) - used previously for FK's, but can be any constraint  
 – Removing constraint(s)
-![](9132/pic/Pasted%20image%2020220808184936.png)
+![](pic/Pasted%20image%2020220808184936.png)
 
 ### ALTER TABLE_Manipulate Constraints
 Turn constraint ON or OFF to temporarily disable
-![](9132/pic/Pasted%20image%2020220808185013.png)
+![](pic/Pasted%20image%2020220808185013.png)
 
 Remove/re add constraint to modify constraint
-![](9132/pic/Pasted%20image%2020220808185035.png)
+![](pic/Pasted%20image%2020220808185035.png)
 
 ### DROP_DELETING A TABLE
 `DROP TABLE training_course PURGE`
@@ -445,7 +445,7 @@ Remove/re add constraint to modify constraint
 
 ## ADDING TUPLES/ROWS TO A TABLE (DML)
 ### INSERT_Adding data to table
-![](9132/pic/Pasted%20image%2020220808190028.png)
+![](pic/Pasted%20image%2020220808190028.png)
 
 #### (TO_DATE)Inserting DATES into a table
 convert a date
@@ -471,7 +471,7 @@ Access the sequence using two built-in variables
 
 
 ## exercise
-![](9132/pic/Week%206%20Pre-Workshop%20Quiz-Creating%20and%20Populating%20Database_%20Attempt%20review.pdf)
+![](pic/Week%206%20Pre-Workshop%20Quiz-Creating%20and%20Populating%20Database_%20Attempt%20review.pdf)
 
 # WEEK 7 Structured Query Language (SQL)
 Create tables in a database  
@@ -480,8 +480,8 @@ Use ORACLE's sequences to generate keys
 Remove tables from a database
 ## SELECT
 ### Anatomy of an SQL SELECT Statement
-![](9132/pic/Pasted%20image%2020220808192758.png)
-![](9132/pic/Pasted%20image%2020220808192818.png)
+![](pic/Pasted%20image%2020220808192758.png)
+![](pic/Pasted%20image%2020220808192818.png)
 ###   Comparison
 Compare the value of one expression to the value of another expression
 `=, !=,< >, <, >, <=, >=`
@@ -514,7 +514,7 @@ Use of BRACKETS better alternative
 
 AND is evaluated to be TRUE if and only if both conditions are TRUE  
 • OR is evaluated to be TRUE if and only if at least one of the conditions  is TRUE
-![](9132/pic/Pasted%20image%2020220808212206.png)
+![](pic/Pasted%20image%2020220808212206.png)
 
 ### NVL_replace a NULL with a value
 It is used to replace a NULL with a value (numeric OR character/string)
@@ -522,7 +522,7 @@ It is used to replace a NULL with a value (numeric OR character/string)
 	`NVL(enrol_mark,0),`
 	`NVL(enrol_grade,'WH')`
 `FROM enrolment; `
-![](9132/pic/Pasted%20image%2020220808213000.png)
+![](pic/Pasted%20image%2020220808213000.png)
 `select rent_no, drone_id,  `
 `to_char(rent_out,'dd-Mon-yyyy') as dateout, `
 `nvl(to_char(rent_in,'dd-Mon-yyyy'),'Still out')  as datein  `
@@ -531,7 +531,7 @@ It is used to replace a NULL with a value (numeric OR character/string)
 
 `select rent_no, drone_id, rent_out, `
 `nvl(rent_in,'Still out') from rental;`
-![](9132/pic/Pasted%20image%2020220808222159.png)
+![](pic/Pasted%20image%2020220808222159.png)
 
 
 ### AS_Renaming Column
@@ -544,18 +544,18 @@ Order can be ASCending or DESCending. The default is ASCending
 `from drone`
 `order by `
 `drone_flight_time desc, drone_id;`
- ![](9132/pic/Pasted%20image%2020220808214828.png)
+ ![](pic/Pasted%20image%2020220808214828.png)
 ### (DISTINCT)removing Duplicate Rows in the Query Result
 `select distinct drone_id  `
 `from rental  `
 `order by drone_id;`
-![](9132/pic/Pasted%20image%2020220808215024.png)
+![](pic/Pasted%20image%2020220808215024.png)
 
 ### TO_CHAR
 Text representing date must be formatted  with TO_DATE when comparing or  inserting/updating
 `select to_char(sysdate,'dd-Mon-yyyy') from dual; = 20-Apr-2021`
 `select  to_char(sysdate,'dd-Mon-yyyy hh:mi:ss AM')  from dual; = 0-Apr-2020 02:51:24 PM `
-![](9132/pic/Pasted%20image%2020220808221630.png)
+![](pic/Pasted%20image%2020220808221630.png)
 
 
 
@@ -566,7 +566,7 @@ placing the join in the where clause is not acceptable
 the general form which always works
 `from aaa JOIN bbb ON aaa.a = bbb.b`
 `from aaa JOIN bbb ON aaa.key = bbb.key`
-![](9132/pic/Pasted%20image%2020220808220008.png)
+![](pic/Pasted%20image%2020220808220008.png)
 
 ### JOIN USING
 requires matching attribute/s in the two tables
@@ -576,17 +576,17 @@ requires matching attribute/s in the two tables
 ### NATURAL JOIN
 requires matching attribute/s in the two tables
 `FROM trainer NATURAL JOIN training_course`
-![](9132/pic/Pasted%20image%2020220808220044.png)
+![](pic/Pasted%20image%2020220808220044.png)
 
 ### Different Types of SQL JOINs
  `(INNER) JOIN`: Returns records that have matching values in both tables
   `LEFT (OUTER) JOIN`: Returns all records from the left table, and the matched records from the right table
   `RIGHT (OUTER) JOIN`: Returns all records from the right table, and the matched records from the left table
   `FULL (OUTER) JOIN`: Returns all records when there is a match in either left or right table
-![](9132/pic/Pasted%20image%2020220808235838.png)
+![](pic/Pasted%20image%2020220808235838.png)
 
 ## exercise
-![](9132/pic/Week%207%20Pre-Workshop%20Quiz%20-%20SQL%20Part%20I_%20Attempt%20review.pdf)
+![](pic/Week%207%20Pre-Workshop%20Quiz%20-%20SQL%20Part%20I_%20Attempt%20review.pdf)
 
 
 # week8 DML Update, Delete and Transaction  Management
