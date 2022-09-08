@@ -1,0 +1,39 @@
+(a) List the order date and customer number of all orders with total price above $500. [1 mark]
+
+R1 = π ordno (σ olprice > 500 (ORDERLINE))
+R2 = π ordno,orddate, custno(ORDERS)
+R3 = R1  ⨝ R2
+R = π orddate,custno(R3)
+
+
+(b) List the order date, product number and the quantity ordered of all orders which were attended by a sales representative named ‘James Oulie’. You may assume that there is only one sales representative who has such a name. [4 marks]
+R1 = π slsrno (σ slsrname = "James Oulie" (SLSREP))
+R2 = π ordno,slsrno (ORDERS)
+R3 = R1  ⨝ R2
+R4  = π ordno,orddate (ORDERS  ⨝ R3)
+R5 = π prodno,olqty,ordno (ORDERLINE  ⨝ R3)
+R6 = R4  ⨝ R5
+R =  π orddate,prodno,olqty(R6)
+
+(c) List the name, street, suburb and postcode of customers who placed an order for the product with product description ‘Dulux 15L Vivid White’ on ‘03-07-2022’. You may assume that there is only one product which has such a description. [5 marks]
+
+R1 = π prodno (σ prodesc = 'Dulux 15L Vivid White'(PRODUCT))
+R2 =  π ordno (ORDERLINE ⨝ R1)
+R3 =  π ordno, custno (σ orddate = ‘03-07-2022’(ORDERS))
+R4 = π custno (R3 ⨝ R2 )
+
+R  = π custname, custstreet,custsuburb, custpostcode(CUSTOMER ⨝ R4)
+
+
+(a)db.service.find({"total_cost": < 100});
+(b)db.service.find({"date":0,"customer_name":0},{$pull:{"quantity":>3,"description":0}});
+(c)db.service.updateOne({"_id": 104},{$pull:{"description": "Castrol GTX Ultra Clean Engine Oil 5 lt","quantity":2}});
+
+1 insert one STUDENT  entity last name 'Baggins',first name 'Frodo' born in 01-May-2004 
+2 insert one STUDENT  entity first name'Gamgee',last name 'Frodo' born in 01-Feb-2003
+3 insert one ENROLMENT entity enrolled by Samwise Gamgee 
+course id is 'FIT3171' and enrol year is 2022,enrol semester is 1
+4 insert one ENROLMENT entity enrolled by Samwise Gamgee 
+course id is 'FIT3171' and enrol year is 2022,enrol semester is 1
+5 insert one ENROLMENT entity enrolled by Samwise Gamgee 
+course id is 'FIT3176' and enrol year is 2022,enrol semester is 1
