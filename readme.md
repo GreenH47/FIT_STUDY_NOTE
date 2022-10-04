@@ -26,10 +26,12 @@
 
 ### FIT5057  
 [ PROJECT  MANAGEMENT Repository](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/5057)  
+[ PROJECT  MANAGEMENT NOTE](https://github.com/GreenH47/FIT_STUDY_NOTE/blob/main/5057/5057note.md)  
 
 ### FIT5136  
+[ SOFTWARE ENGINERING NOTE](https://github.com/GreenH47/FIT_STUDY_NOTE/blob/main/5136/5136NOTE.md) 
 [ SOFTWARE ENGINERING Repository](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/5136)  
 
 ### FIT5143  
-IT RESEARCH METHOD
+[IT RESEARCH METHOD NOTE](https://github.com/GreenH47/FIT_STUDY_NOTE/blob/main/5143/5143NOTE.md)  
 
