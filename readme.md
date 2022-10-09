@@ -1,4 +1,7 @@
 # MY MONASH IT LEARNING NOTE
+## how to use it
+1. you can view the MD file online 
+2. download the whole repository and view it via Obsidian vault that can show all linked file in the note document
 ## 2022 SEMSTER 1
 ### FIT9131   
 [JAVA WEEKLY CODE Repository](https://github.com/GreenH47/FIT_STUDY_NOTE/tree/main/9131)
