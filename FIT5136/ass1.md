@@ -106,7 +106,7 @@ o For Module 2, this is added by the customer itself, if the customer chooses to
 You need to write at most 2 user story for each of these features
 
 Week 2 lecture p52
-![](5136/pic/Week%202%20Lecture%20Slide%20(1%20Slide%20Per%20Page).pdf)
+![](pic/Week%202%20Lecture%20Slide%20(1%20Slide%20Per%20Page).pdf)
 
 ## 1.3. acceptance criteria
 For each user story, write one acceptance criteria
