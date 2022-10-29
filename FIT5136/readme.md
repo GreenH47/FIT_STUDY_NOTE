@@ -1,4 +1,8 @@
+# How to use this note
+1. download the whole repository and view it via [Obsidian vault](https://help.obsidian.md/How+to/Working+with+multiple+vaults) that can show the linked section in the note document ![](pic/Pasted%20image%2020221029104434.png)
+	and all linked file in text without checking the attachment folder ![](pic/Pasted%20image%2020221029122902.png)
 
+2. you can view the MD file online but will lose the extra information
 
 # Week 2 Requirements engineering
 ![](pic/Pasted%20image%2020221027144847.png)
@@ -330,6 +334,7 @@ Example of inheritance:
 ## ==重点Initial Class Diagram==
 ![](pic/Pasted%20image%2020221028193236.png)
 ![](pic/Pasted%20image%2020221028213041.png)
+![](pic/Pasted%20image%2020221029152323.png)
 ### ==重点how to draw diagram==
 1. 仔细阅读收集到的客户需求
 2. 定义所有收集到资料的名词部分，并对他们具体分类： [Classification of identified nouns 已识别名词的分类](#Classification%20of%20identified%20nouns%20已识别名词的分类)
@@ -407,6 +412,7 @@ How to refine the scenario and use it to show the  interactions between objects 
 + 起点黑圆圈 终点黑圆圈套一个同心圆环
 + 不用跨级返回循环
 + 可以画登录 没时间的话从mainpage开始画
++ 起始点->各个state->state之间过程、操作->终止点
 + ![](pic/Pasted%20image%2020221028220044.png) 当前界面用户可以看见什么内容 主要功能选项 可不写
 
 
@@ -439,11 +445,13 @@ content in  week6 FLUX.pdf
 ![](pic/Pasted%20image%2020220911153036.png)
 ![](pic/Pasted%20image%2020220911153048.png)
 
-# WEEK 8
+# WEEK 8 SE Code of Ethics  
+
 ## WEEKLY QUIZ
 ![](pic/Pasted%20image%2020220917130031.png)
 ![](pic/Pasted%20image%2020220917130052.png)
 ![](pic/Pasted%20image%2020220917130108.png)
+
 
 # WEEK 10
 ## WEEKLY QUIZ
@@ -474,29 +482,29 @@ check SampleExamQuestions.pdf
 check pic/SampleSolutions.pdf
 
 # Extra exercise
-## exercise one 10 pts
+
 ![](pic/Pasted%20image%2020221028221618.png)
-1. functional requirement select some function and write down: [Functional requirements](#Functional%20requirements) 
+## 1. functional requirement select some function and write down: [Functional requirements](#Functional%20requirements) 
 + download photo
 + system read photo
 + tag
 + upload
 + watermark
 
-2. Non functional requirement:[Non-functional requirements](#Non-functional%20requirements)
+## 2. Non functional requirement:[Non-functional requirements](#Non-functional%20requirements)
 + colour theme can be switch for easier reading
 + API linked  to system
 + flag design icon to show different options
 + system accept file type
 
 
-3. User story [==必考User stories==](#==必考User%20stories==)
+## 3. User story [==必考User stories==](#==必考User%20stories==)
 + 功能性需求选择来写
 + as a staff, i want to add a watermark so that user can identify their photo
 + as a user, i want to upload photo to the cloud so that i can view the photo in different device anywhere anytime
 
 
-4. Acceptance criteria [==必考Acceptance criteria==](#==必考Acceptance%20criteria==)
+## 4. Acceptance criteria [==必考Acceptance criteria==](#==必考Acceptance%20criteria==)
 
 >  as a staff, i want to add a watermark so that user can identify their photo
 
@@ -507,9 +515,22 @@ check pic/SampleSolutions.pdf
 + add watermark
 + confirm and response within 2 second
 
-> as a user, i want to upload photo to the cloud so that i can view the photo in different device anywhere
+> as a user, i want to upload photo to the cloud so that i can view the photo in different device anywhere anytime
 
  Acceptance criteria 2
 + d
 
-5. Initial class diagram [==重点Initial Class Diagram==](#==重点Initial%20Class%20Diagram==)
+## 5. Initial class diagram 20pts [==重点Initial Class Diagram==](#==重点Initial%20Class%20Diagram==)
++ desktop user client staff system
++ ![](pic/Pasted%20image%2020221029115600.png)
++ api
++ ![](pic/Pasted%20image%2020221029115736.png)
+
+![](pic/Pasted%20image%2020221029122046.png)
+
+[My Initial class diagram in lucidchart](https://lucid.app/lucidchart/a4026035-3501-4a58-bd72-e21ef3b3d8c3/edit?viewport_loc=-324%2C159%2C2281%2C1036%2C0_0&invitationId=inv_3d939728-1cf9-48da-8b9b-8975c434fd64
+)
+
+## 6. Sequence diagram 20 pts [==重点Sequence diagram==](#==重点Sequence%20diagram==)
+![](pic/Pasted%20image%2020221029124320.png)
+![](pic/Pasted%20image%2020221029150951.png)
