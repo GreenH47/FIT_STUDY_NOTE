@@ -1,5 +1,6 @@
 # How to use this note
-1. download the whole repository and view it via [Obsidian vault](https://help.obsidian.md/How+to/Working+with+multiple+vaults) that can show the linked section in the note document ![](pic/Pasted%20image%2020221029104434.png)
+1. download the [whole repository](https://github.com/GreenH47/FIT_STUDY_NOTE) and view it via [Obsidian vault](https://help.obsidian.md/How+to/Working+with+multiple+vaults) that can show the linked section in the note document ![](pic/Pasted%20image%2020221029104434.png)
+
 	and all linked file in text without checking the attachment folder ![](pic/Pasted%20image%2020221029122902.png)
 
 2. you can view the MD file online but will lose the extra information
@@ -376,7 +377,7 @@ Example of inheritance:
 ### class communication
 ![](pic/Pasted%20image%2020221028200821.png)
 
-## ==重点Sequence diagram==
+## ==重点Sequence_diagram==
 ![](pic/Pasted%20image%2020221028202912.png)
 + The realization of a specific scenario of a use case is  depicted using an interaction diagram 使用交互图来描述用例的特定场景的实现
 + Models the ==flow of logic== within the system 对系统内的逻辑流进行建模
@@ -452,7 +453,111 @@ content in  week6 FLUX.pdf
 ![](pic/Pasted%20image%2020220917130052.png)
 ![](pic/Pasted%20image%2020220917130108.png)
 
+## ==重点software Engineering Code of Ethic==
 
+to address the complexity of  moral issues 解决道德问题的复杂性 
+https://ethics.acm.org/code-of-ethics/software-engineering-code/
+1. ==PUBLIC== Software engineers shall act consistently  with the ==public interest== 软件工程师的行为应符合公共利益
+2. ==CLIENT AND EMPLOYER== Software engineers shall act  in a manner that is in the ==best interests of their client and  employer== consistent with the public interest 软件工程师的行为方式应符合其客户和雇主的最大利益，并符合公共利益
+3. ==PRODUCT== Software engineers shall ensure that their products and related modifications ==meet the highest professional standards possible==. In particular, software engineers shall, as appropriate 软件工程师应确保他们的产品和相关修改符合最高的专业标准。特别是，软件工程师应酌情
+4. ==JUDGEMENT== Software engineers shall ==maintain integrity and independence in their professional judgment.== In particular, software engineers shall, as appropriate 软件工程师应保持其专业判断的完整性和独立性。特别是，软件工程师应酌情
+5. ==MANAGEMENT== Software engineering managers and leaders shall subscribe to and promote an ==ethical approach to the management of software development and maintenance== . In particular, those managing or leading software engineers shall, as appropriate 软件工程经理和领导者应赞同并提倡以合乎道德的方式管理软件开发和维护。特别是，那些管理或领导软件工程师的人应酌情
+6. ==PROFESSION== Software engineers shall ==advance the integrity and reputation of the profession consistent== with the public interest. In particular, software engineers shall, as appropriate: 软件工程师应促进符合公共利益的职业诚信和声誉。特别是，软件工程师应酌情：
+7. ==COLLEAGUES== Software engineers shall ==be fair to and supportive of their colleagues.== In particular, software engineers shall, as appropriate: 软件工程师应公平对待并支持他们的同事。特别是，软件工程师应酌情：
+8. ==SELF== Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession. In particular, software engineers shall continually endeavor to: 软件工程师应参与有关其职业实践的终身学习，并应促进职业实践的道德方法。特别是，软件工程师应不断努力：
+
+![](pic/Pasted%20image%2020221029172903.png)
+### PUBLIC
+Software engineers shall act consistently  with the ==public interest== 软件工程师的行为应符合公共利益
++ 承担责任
++ 平衡利益
++ 安全合规
++ 公示危害
++ 解决公众问题
++ 公开声明
++ 残障支持
++ 公益事业
+
+### CLIENT AND EMPLOYER
+Software engineers shall act  in a manner that is in the ==best interests of their client and  employer== consistent with the public interest 软件工程师的行为方式应符合其客户和雇主的最大利益，并符合公共利益
++ 竭尽所能 诚实公开
++ 不用 盗版软件
++ 授权使用雇主财产
++ 文件批准
++ 保密
++ 收集证据
++ 识别问题
++ 不参与同业竞争
++ 不使用不当利益
+
+### Product
+Software engineers shall ensure that their products and related modifications ==meet the highest professional standards possible==. In particular, software engineers shall, as appropriate 软件工程师应确保他们的产品和相关修改符合最高的专业标准。特别是，软件工程师应酌情
++ 保质保时
++ 完成目标
++ 识别解决问题
++ 培训胜任
++ 合适方法
++ 遵守专业标准
++ 理解软件规范
++ 确保使用软件规范
++ 项目定量评估
++ 充分测试审查
++ 准备文档解决方案
++ 尊重隐私
++ 数据授权使用
++ 数据完整有效
+
+### Judgement
+Software engineers shall ==maintain integrity and independence in their professional judgment.== In particular, software engineers shall, as appropriate 软件工程师应保持其专业判断的完整性和独立性。特别是，软件工程师应酌情
++ 调整技术判断
++ 只签署受监督文件
++ 评估文档客观
++ 不得 财务不当
++ 披露利益冲突
+
+### Management
+Software engineering managers and leaders shall subscribe to and promote an ==ethical approach to the management of software development and maintenance== . In particular, those managing or leading software engineers shall, as appropriate 软件工程经理和领导者应赞同并提倡以合乎道德的方式管理软件开发和维护。特别是，那些管理或领导软件工程师的人应酌情
++ 确保良好管理
++ 了解开发标准
++ 保密
++ 力所能及
++ 项目评估
++ 招聘合适人才
++ 薪酬合理
++ 提拔人才
++ 产权所有明确
++ 规定审理指控
++ 言行一致
+
+### PROFESSION
+Software engineers shall ==advance the integrity and reputation of the profession consistent== with the public interest. In particular, software engineers shall, as appropriate: 软件工程师应促进符合公共利益的职业诚信和声誉。特别是，软件工程师应酌情：
++ 有道德的环境
++ 促进了解软件
++ 共享软件知识
++ 遵守本守则
++ 自我提升‘
++ 遵守法律
++ 诚实守信
++ 纠正错误
++ 避免利益冲突
+
+### Colleagues
+Software engineers shall ==be fair to and supportive of their colleagues.== In particular, software engineers shall, as appropriate: 软件工程师应公平对待并支持他们的同事。特别是，软件工程师应酌情：
++ 鼓励同事遵守
++ 协助发展
++ 充分信任
++ 客观坦率
++ 公平
++ 不过度干预
++ 征求意见
+
+### Self
+Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession. In particular, software engineers shall continually endeavor to: 软件工程师应参与有关其职业实践的终身学习，并应促进职业实践的道德方法。特别是，软件工程师应不断努力：
++ 了解规范
++ 提高开发质量
++ 文档管理
++ 法律法规
++ 公平公正
 # WEEK 10
 ## WEEKLY QUIZ
 ![](pic/Pasted%20image%2020221009165146.png)
@@ -531,6 +636,7 @@ check pic/SampleSolutions.pdf
 [My Initial class diagram in lucidchart](https://lucid.app/lucidchart/a4026035-3501-4a58-bd72-e21ef3b3d8c3/edit?viewport_loc=-324%2C159%2C2281%2C1036%2C0_0&invitationId=inv_3d939728-1cf9-48da-8b9b-8975c434fd64
 )
 
-## 6. Sequence diagram 20 pts [==重点Sequence diagram==](#==重点Sequence%20diagram==)
+## 6. Sequence diagram 20 pts [==重点Sequence diagram==](#==重点Sequence_diagram==)
+
 ![](pic/Pasted%20image%2020221029124320.png)
 ![](pic/Pasted%20image%2020221029150951.png)
