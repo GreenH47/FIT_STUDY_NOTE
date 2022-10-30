@@ -4,60 +4,78 @@
     "type": "split",
     "children": [
       {
-        "id": "98267d03ef051c0a",
+        "id": "88fb3a2340604024",
         "type": "tabs",
         "dimension": 17.77777777777778,
         "children": [
           {
-            "id": "99a9010cb89fea6b",
+            "id": "181a739b1bc0f89c",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "outline",
               "state": {
                 "file": "FIT5136/readme.md"
-              }
+              },
+              "pinned": true
             },
-            "group": "fd301dd3e0cc7426"
+            "group": "1303d9acc50f72bc"
           }
         ]
       },
       {
-        "id": "4f47308df050485c",
+        "id": "e73561537bf77077",
         "type": "tabs",
-        "dimension": 48.888888888888886,
+        "dimension": 42.22222222222222,
         "children": [
           {
-            "id": "48222d4b4e908efd",
+            "id": "e36058bc90a23433",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "FIT5136/readme.md",
                 "mode": "source",
                 "source": true
-              }
+              },
+              "pinned": true
             },
-            "group": "fd301dd3e0cc7426"
+            "group": "1303d9acc50f72bc"
           }
         ]
       },
       {
-        "id": "1369d626df678638",
+        "id": "1117a0a54de94b82",
         "type": "tabs",
-        "dimension": 33.33333333333333,
+        "dimension": 40,
         "children": [
           {
-            "id": "58b75d4c18eb7482",
+            "id": "86ca04d0bb9385b6",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "FIT5136/readme.md",
                 "mode": "preview",
                 "source": true
-              }
+              },
+              "pinned": true
             },
-            "group": "fd301dd3e0cc7426"
+            "group": "1303d9acc50f72bc"
+          },
+          {
+            "id": "e49210a9cd4e5ac5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FIT5136/readme.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -109,7 +127,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 134.5083885192871,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -170,24 +188,25 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "48222d4b4e908efd",
+  "active": "86ca04d0bb9385b6",
   "lastOpenFiles": [
+    "FIT5136/ass1.md",
+    "FIT5136/YYYY-MM-DD.md",
     "FIT5136/readme.md",
+    "FIT5136/Pasted image 20221030142937.png.md",
+    "未命名.md",
     "Test/Index.md",
     "Test/test 2.md",
-    "FIT5136/ass1.md",
     "FIT5057/readme.md",
     "FIT5136/pic/Pasted image 20221028221618.png",
-    "readme.md",
-    "FIT9132/readme.md",
-    "FIT5032/readme.md",
-    "FIT5125/readme.md"
+    "readme.md"
   ]
 }

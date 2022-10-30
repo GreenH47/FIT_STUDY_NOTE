@@ -7,8 +7,8 @@
   ],
   "autoConvertHtml": true,
   "newFileLocation": "current",
-  "newLinkFormat": "relative",
-  "attachmentFolderPath": "./pic",
+  "newLinkFormat": "absolute",
+  "attachmentFolderPath": "content",
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": true,
   "pdfExportSettings": {

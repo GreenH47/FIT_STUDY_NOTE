@@ -1,9 +1,32 @@
+[[YYYY-MM-DD]]
+
 # How to use this note
 1. download the [whole repository](https://github.com/GreenH47/FIT_STUDY_NOTE) and view it via [Obsidian vault](https://help.obsidian.md/How+to/Working+with+multiple+vaults) that can show the linked section in the note document ![](pic/Pasted%20image%2020221029104434.png)
 
 	and all linked file in text without checking the attachment folder ![](pic/Pasted%20image%2020221029122902.png)
 
 2. you can view the MD file online but will lose the extra information
+# Week  1
+## Waterfall life-cycle model
++ Plan-driven processes, all activities are  planned,
++ however, waterfall model leaves limited space  for the changes or frequent client interaction
+
+![](content/Pasted%20image%2020221030184600.png)
+![](content/Pasted%20image%2020221030184700.png)
+## Rapid prototyping life-cycle model
++ It is client-oriented, where the client get to provide  feedback on the prototype before moving on
+
+![](content/Pasted%20image%2020221030184951.png)
+
+## Incremental Development
+![](content/Pasted%20image%2020221030185155.png)
++ Initial version: developing an initial implementation 初始版本：开发初始实施
++  Intermediate versions: getting feedback from the clients and users and evolving the software through versions until the system is developed 中间版本：从客户和用户那里获得反馈，并通过版本改进软件，直到开发出系统
++  Each “increment” includes some of the functionality requested by the client 每个“增量”包括客户要求的一些功能
+
+## Agile methodology
+![](content/Pasted%20image%2020221030185418.png)
+
 
 # Week 2 Requirements engineering
 ![](pic/Pasted%20image%2020221027144847.png)
@@ -40,7 +63,7 @@
 + After receiving an inspection request, the system must acknowledge with a response e-mail ***within 10 seconds***
 +  ==login  不是非功能性要求==
 
-## USE CASE DIAGRAMS
+## ==重点USE CASE DIAGRAMS==
 TO DESCRIBE AND DOCUMENT ALL INTERACTIONS WITH THE SYSTEM 描述和记录与系统的所有交互
 ![](pic/Pasted%20image%2020221027160234.png)
 
@@ -203,6 +226,8 @@ A scenario = a description of a use case
 A scenario can be “normal” and “exception”
 场景 = 用例的描述 场景可以是“正常”和“异常”
 ![](pic/Pasted%20image%2020221027214214.png)
+![](content/0001.jpg)
+![](content/Pasted%20image%2020221030202927.png)
 + Use Case Name - short, descriptive verb phrase;  简短的描述性动词短语 
 + Scenario - a sentence that captures the essence of the use case (functionality);  捕捉用例本质（功能）的句子
 + Trigger – the actor who perform certain actions to triggers the use case;  实际触发用例的参与者
@@ -238,6 +263,8 @@ objects represent something in the  real world Easy way to remember: they are us
 + Shaded area = person-hrs x time = total effort 阴影面积 = 工时 x时长 = 总努力
 
 ![](pic/Pasted%20image%2020221028162732.png)
+![](content/Pasted%20image%2020221030194104.png)
+![](content/Pasted%20image%2020221030200436.png)
 
 # ==重点WEEK 5 Initial Class Diagram,Sequence Diagram, State Chart==
 ## WEEKLY QUIZ
@@ -558,10 +585,104 @@ Software engineers shall participate in lifelong learning regarding the practice
 + 文档管理
 + 法律法规
 + 公平公正
-# WEEK 10
+
+## IP
+知识产权是思想的表达，而不是思想本身。
++ 软件著作权
++ 软件专利
++ 开源软件（Copyleft）
+# WEEK 10 Quality and Testing
 ## WEEKLY QUIZ
 ![](pic/Pasted%20image%2020221009165146.png)
 ![](pic/Pasted%20image%2020221009165157.png)
+
+[here](#weekly-quiz)
+
+
+## quality assurance (QA) 质量保证 (QA)
++ Human Reviews -   人工审核（演练Walkthroughs和检查Inspections，Non-execution-based）
++ Proving （正式方式，Non-execution-based）
++ Software Testing -   软件测试（Execution-based）
+
+# ==重点WEEK 11 Software Testing==
++ Positive and Negative Testing
++ Unit Testing
++  Test case selection
++  ==Black-box testing techniques (functional) Ignore the code, use the specs to select test case （功能性）– 忽略代码，使用规范选择测试用例==
++  ==Glass-box testing technique (statement, branch, path)   Ignore the specs, use the code to select test cases (statement, branch, path) – 忽略规范，使用代码选择测试用例==
+
+![](content/Pasted%20image%2020221030160346.png)
+## Positive and Negative Test
++ Positive testing determines that your ==application works as  expected==. If an error is encountered during positive testing, the   test fails 正面测试确定您的应用程序按预期工作。如果在正面测试期间遇到错误，则测试失败
++ Negative testing ensures that your application can gracefully ==handle invalid input or unexpected user behavior== The purpose of negative testing is to detect such situations  and prevent applications from crashing.负测试确保您的应用程序可以优雅地处理无效输入或意外的用户行为 负面测试的目的是检测此类情况并防止应用程序崩溃。
+
+## Black Box Testing 黑盒测试
++ We base the test data on the functionality of the code artifacts 将测试数据基于代码工件的功能
++ Each item of functionality or function is identified 识别每个功能或功能项
++ Test data are devised to test each (lower-level) function separately 设计测试数据以分别测试每个（低级）功能
++ Then, higher-level functions composed of these lower-level functions are tested 然后，由这些低级功能组成的高级功能被测试
+
+![](content/Pasted%20image%2020221030170139.png)
+
+## White Box Testing 白盒测试 (Glass Box Testing / Structural testing)
++ Code Flow Graphs help in finding the correct coverage manually 代码流图有助于手动查找正确的覆盖率 
++ Issues (Coverage):
+• Statement coverage
+• Branch coverage
+• Path coverage
+• All-definition-use path coverage
+问题（覆盖率）： • 语句覆盖率 • 分支覆盖率 • 路径覆盖率 • 全定义使用路径覆盖率
+
+### Statement coverage
++ Running a set of test cases in which every statement is executed at least once 运行一组测试用例，其中每条语句至少执行一次
++  A CASE tool needed to keep track 需要一个 CASE 工具来跟踪
++ weakness Both statements can be executed  without the fault showing up 两个语句都可以执行而不会出现错误
++ ![](content/Pasted%20image%2020221030172005.png)
+### Branch Coverage
++  Running a set of test cases in which every branch is executed at least once (as well as all statements) 运行一组测试用例，其中每个分支至少执行一次（以及所有语句）
+
+### path Coverage
++ Running a set of test cases in which every path is executed at least once (as well as all statements) 运行一组测试用例，其中每条路径至少执行一次（以及所有语句
++ Problem: The number of paths may be very large eg. for loops 路径的数量可能非常大——例如。 for 循环
+
+### test compare
+```java
+public int returnInput(int input, boolean condition1, boolean condition2, boolean condition3)
+{ 
+	int x = input;
+	int y = 0;
+	if (condition1) x++;
+	if (condition2) x--;
+	if (condition3) y=x;
+	return y;
+}
+```
+Branch coverage
+> Goal: cover 100% of branches
+Two test case is needed
+Test case 1: returnInput(x, true, true, true)
+Test case 2: returnInput(x, false, false, false)
+100% statement covered
+100% of branches covered
+only two paths
+
+Statement coverage
+> Goal: execute every statement  
+One test case is needed  
+Test case 1: returnInput(x, true, true, true)  
+100% statement covered only half of branches  
+only one path
+![](content/Pasted%20image%2020221030172640.png)
+
+Path Coverage
+> Goal: to cover 100% of paths  
+8 test cases are needed
+![](content/Pasted%20image%2020221030172725.png)
+100% statement covered  
+100% of branches covered  
+100% of paths covered
+
+
 
 # WEEK 12
 ## WEEKLY QUIZ
@@ -582,9 +703,65 @@ Software engineers shall participate in lifelong learning regarding the practice
 
 
 # Sample exam and question
-check Extra%20questions%20(1).pdf
-check SampleExamQuestions.pdf
-check pic/SampleSolutions.pdf
+## question 1 workflow
+### scenario
+> After graduation, three IT students decided to start a software company called SmartComputing. You had just been hired as a software engineer by the founders.
+> On your first day in the new job you asked the Chief Technology Officer (CTO) about SmartComputing’s software engineering process. She replied:
+> We follow the Unified Process to make sure we develop the right product in the right way. The process consists of five distinct workflows. ==We complete all the tasks and confirm all the documentations in each workflow before we move on to the next workflow. (waterfall plan driven只有纵向没有 横向)== 
+> 
+> The first workflow is the Requirements Workflow, where we brainstorm ideas about features that our customers will love to have.
+> The next workflow is the Analysis Workflow. This involves analysing the problem domain more deeply and describing the requirements in the kind of exacting detail that developers need. Typically, in this workflow we will produce conceptual class diagrams,detailed use case scenarios, interaction diagrams and statecharts.
+> Once the Analysis Workflow is completed, we begin the Design Workflow, where we refine the conceptual class diagram into something more concrete, producing a detailed class diagram.
+> The next workflow of the process is the Implementation Workflow. In this workflow, we write the code to implement the detailed class diagram produced in the previous workflow.
+> ==Finally, we will have the Test Workflow, where we test our program to ensure that the system works correctly.==
+> Based on what you have learned in FIT5136, analyse and critique the company’s software engineering process described above by the CTO
+
+### sample solution [==必考Workflows==](#==必考Workflows==)
+The Unified Process has two dimensions:
+![](content/Pasted%20image%2020221030200436.png)
+The ==vertical process that are more technical oriented (Requirement, Analysis, Design, Implementation, Testing==, 
+The ==horizontal processes that are more business oriented (Inception, Elaboration, Construction and Transition)==.
+The vertical process is similar to the company’s description of the “Unified process” (incrementation)
+The company ==does not focus on horizontal process at all (Iterations among workflows) which are more business oriented.==The main thing that makes ==unified process is the combination of these two dimensions-iteration and incrementation==.
+From the CTO description, the company process is therefore too similar to ==traditional waterfall model –step by step – one workflow after another is like one phase after another==.
+From the description, the company focuses on testing at the end of the process. ==Testing should not just be done at the end for the Unified Process! Testing should also be done in every workflow – the entire process!==
+Test Workflow should cover testings during every workflow – inspection, human reviews and checking for traceability of artefacts
+There should also be more testing of program at the end like integration testing, system testing and acceptance testing in the final testing
+
+## question 2 use case diagram + use case scenario
+### scenario
+> You then asked the CTO about the latest project the company is undertaking. She mentioned that the project is to develop an on-line learning platform called Poodle 2 system for the university.
+> The first task you, as the software engineer, are assigned for ==Poodle 2== is the analysis of the functionality of adding students to the system:
+>==An administrator is able to add a student enrolled in a unit==. An ==administrator can also list the students added in the last 24 hours== and also ==delete a student if it was added by mistake==
+> (a) Draw a UML use case diagram for this functionality.
+> (b) On the next page is a detailed description of the normal scenario for the “Add Student” use case, with no exception conditions. ==Write three exception conditions, including reasonable actions to be taken==.
+> ![](pic/Pasted%20image%2020221027214214.png)
+
+### UML use case diagram [==重点USE CASE DIAGRAMS==](#==重点USE%20CASE%20DIAGRAMS==)
+admin is initiator so in the left
+![](content/Pasted%20image%2020221030201926.png)
+
+### use case scenario  [Use case scenario](#Use%20case%20scenario)
+Question 2 (b)
+Solutions (reasonable exceptions include (but not limited to):
++ 2.1 If the administrator enters the wrong id, then System displays message to try again
++ 2.1 If the administrator enters the wrong password, then System displays message to try again.
++ 3.1 If the student is not found, go back to the main page.
++ 3.1 If the id entered is not a student, go back to the main page.
++ 4.1 If the unit is not found, go back to the main page.
++ 5.1 If the student cannot be added because he is already enrolled in the unit, go back to the main page.
++ 6.1 Administrator hits cancel, go back to the main page
+
+##  question 7 workflow
+###  scenario
+> The SmartSolutions software company had a contract with a transportation company, TransCo, to add a new component to their existing scheduling tool. The new component was to be a smart reasoning component for recommending routes to drivers. After the first version was delivered, TransCo decided that the new component would have to contain more features to allow maximum flexibility for users (“event 1”).
+> After incorporating these and the second version was delivered, SmartSolutions found out that the company producing the constraint solver library that it was using had gone broke, so it needed to change the design to use a different library(“event 2”).
+> Then SmartSolutions realized its own analysts had misunderstood one of TransCo’s requirements, so they had to re-do some of the analysis (“event 3”).
+> Below is an “empty” depiction of the Unified Process. Extend the figure to represent (roughly) the relative effort given to the different workflows during this project. Indicate on the x (time) axis roughly when “event 1”, “event 2” and “event 3” occurred
+> ![](content/Pasted%20image%2020221030203525.png)
+## workflow [==必考Workflows==](#==必考Workflows==)
+![](content/Pasted%20image%2020221030194104.png)
+
 
 # Extra exercise
 
