@@ -50,7 +50,7 @@
 + ==login  不是功能性要求==
 
 ## Non-functional requirements
-+ ==定义系统的特性, 一般是隐性的==
++ <mark>定义系统的特性, 一般是隐性的</mark>
 + A specific criteria that can be used to judge the operation of a system, rather than specific behaviours可用于判断系统运行而非特定行为的特定标准
 + The nitty-gritty of the services or functions offered by the system. The requirements that makes the quality of the system better系统提供的服务或功能的本质。使系统质量更好的要求
 + Often apply to the system as a whole rather than individual features or functions.通常适用于整个系统而不是单个特性或功能
@@ -406,6 +406,7 @@ Example of inheritance:
 
 ## ==重点Sequence_diagram==
 ![](pic/Pasted%20image%2020221028202912.png)
+![](content/img4.jpg)
 + The realization of a specific scenario of a use case is  depicted using an interaction diagram 使用交互图来描述用例的特定场景的实现
 + Models the ==flow of logic== within the system 对系统内的逻辑流进行建模
 +  Describes how—and in what order—a group of objects  works together  描述一组对象如何以及以何种顺序协同工作
@@ -579,14 +580,23 @@ Software engineers shall ==be fair to and supportive of their colleagues.== In p
 + 征求意见
 
 ### Self
-Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession. In particular, software engineers shall continually endeavor to: 软件工程师应参与有关其职业实践的终身学习，并应促进职业实践的道德方法。特别是，软件工程师应不断努力：
+Software engineers shall participate in ==lifelong learning regarding the practice of their profession== and shall promote an ethical approach to the practice of the profession. In particular, software engineers shall continually endeavour to: 软件工程师应参与有关其职业实践的终身学习，并应促进职业实践的道德方法。特别是，软件工程师应不断努力：
 + 了解规范
 + 提高开发质量
 + 文档管理
 + 法律法规
 + 公平公正
 
-## IP
+## IP Copyright
+IP
++ Intellectual property (IP) refers to creations of the mind: inventions, literary and artistic works, and symbols, names, images, and designs used in commerce知识产权 (IP) 是指心灵的创造：发明、文学和艺术作品以及商业中使用的符号、名称、图像和设计
++ Give authors and inventors rights for a limited time  授予作者和发明者在有限时间内的权利
++ 4 Ways to Protect Intellectual Property Trade Secrets; Trademarks and Service Marks; Patents; Copyrights  保护知识产权的方法 商业秘密 商标和服务标志  专利 版权 
+
+
+Copyright
++ Copyright law secures for the owner of a  creative work the exclusive right to control who  can make copies, or make works derived from  the original work版权法确保创意作品的所有者拥有控制谁可以复制或制作源自原始作品的作品的专有权 Protect specific expressions of ideas, not ideas  themselves 保护思想的具体表达，而不是思想本身
+
 知识产权是思想的表达，而不是思想本身。
 + 软件著作权
 + 软件专利
@@ -605,6 +615,7 @@ Software engineers shall participate in lifelong learning regarding the practice
 + Software Testing -   软件测试（Execution-based）
 
 # ==重点WEEK 11 Software Testing==
++ ==Test Workflow should cover testings during every workflow测试贯穿整个阶段==
 + Positive and Negative Testing
 + Unit Testing
 +  Test case selection
@@ -694,12 +705,14 @@ Path Coverage
 + 考试时间： 2小时10分钟
 + 需要用笔画图， 因此带好铅笔和橡皮
 + 题目类型：
-1. Ass1
-2. Ass2 （initial class + sequence class + state (或者unified process or UML use case diagram)）
-3. Ass4
-4. Ass5
-5. 没有Programming 题目，没有 ER-digram for class diagram
-6. 除了作业相关的题目，可能还有10分以内的非作业内容，比如说IP等
+1. (10 pts) function /no + user story + acceptance criteria
+2. (20 pts) initial class diagram
+3. (20 pts) sequence diagram
+4. (10 pts) UML / state chart / unifed
+5. (15 pts) extra  (test / ip copyright)
+6. (25 pts) ethics
+7. 没有Programming 题目，没有 ER-digram for class diagram
+8. 除了作业相关的题目，可能还有10分以内的非作业内容，比如说IP等
 
 
 # Sample exam and question
@@ -716,7 +729,8 @@ Path Coverage
 > ==Finally, we will have the Test Workflow, where we test our program to ensure that the system works correctly.==
 > Based on what you have learned in FIT5136, analyse and critique the company’s software engineering process described above by the CTO
 
-### sample solution [==必考Workflows==](#==必考Workflows==)
+### 1a workflow
+ [==必考Workflows==](#==必考Workflows==)
 The Unified Process has two dimensions:
 ![](content/Pasted%20image%2020221030200436.png)
 The ==vertical process that are more technical oriented (Requirement, Analysis, Design, Implementation, Testing==, 
@@ -737,11 +751,13 @@ There should also be more testing of program at the end like integration testing
 > (b) On the next page is a detailed description of the normal scenario for the “Add Student” use case, with no exception conditions. ==Write three exception conditions, including reasonable actions to be taken==.
 > ![](pic/Pasted%20image%2020221027214214.png)
 
-### UML use case diagram [==重点USE CASE DIAGRAMS==](#==重点USE%20CASE%20DIAGRAMS==)
+### 2a UML use case diagram 
+[==重点USE CASE DIAGRAMS==](#==重点USE%20CASE%20DIAGRAMS==)
 admin is initiator so in the left
 ![](content/Pasted%20image%2020221030201926.png)
 
-### use case scenario  [Use case scenario](#Use%20case%20scenario)
+### 2b use case scenario 
+ [Use case scenario](#Use%20case%20scenario)
 Question 2 (b)
 Solutions (reasonable exceptions include (but not limited to):
 + 2.1 If the administrator enters the wrong id, then System displays message to try again
@@ -751,42 +767,178 @@ Solutions (reasonable exceptions include (but not limited to):
 + 4.1 If the unit is not found, go back to the main page.
 + 5.1 If the student cannot be added because he is already enrolled in the unit, go back to the main page.
 + 6.1 Administrator hits cancel, go back to the main page
+## question 3 noun extractions +  initial class diagram
+### scenario
+> The CTO provides more description about the Poodle 2 project below:
+> The ==university== that we graduated from has a very bad ==on-line learning platform called Poodle==. We were asked to improve and extend the current system. I think we were successful in getting the project because three of us were former students and we had used their system before. Based on my experience, I can confirm that the system is really bad and definitely needs improvements. We ==call this project Poodle 2.==
+> Every user of Poodle 2 is identified by ==an id and a name==. To use the system, every user will need a ==password== to log in. In Poodle 2, ==administrators== can ==create units==. Each ==unit is identified by a unit code and a unit name==. ==Teaching staff== can ==create contents in units== they teach and each teaching staff can teach up to ==four unit==s. ==Students have access to the contents as long as they are enrolled in the unit==. Every student can enrol in up to ==four units==. An ==administrator can add a student to the unit== if the student is officially enrolled in the unit. An ==administrator can also delete a student from the unit if the student is no longer enrolled.==
+> Students are allowed to ==comment on units and contents in Poodle 2==. Comments on a unit and comments on its contents can ==only be created and viewed by students currently enrolled in the unit and staff teaching the unit==. 
+> ==Users given authorisation can post replies to a comment.== A  ==lecturer of a unit or an administrator can remove a comment== if the comment is deemed inappropriate, irrelevant or not useful in general
+> Based on the CTO’s description of the Poodle 2 project and the use case scenario in Question 2, you are tasked  to produce an initial class diagram for the project
+
+### 3a noun extractions 
+[Classification of identified nouns 已识别名词的分类](#Classification%20of%20identified%20nouns%20已识别名词的分类)
+> (a) Perform noun extractions and build a dictionary of abstractions for the system. Use it to decide on your candidate classes by assessing each abstraction and considering whether it: 
+> lies outside the problem boundary and may therefore be ignored, 
+> is a candidate entity class, 
+> or is likely to be a simple attribute of a class
+
+ Outside the problem boundary and may therefore be ignored: 
++ platform, experience, Poodle 2 (okay to make this an entity class), project, system, Poodle, Improvement
+
+ Candidate entity classes:
++ University, Unit, Administrator, User, Teaching Staff, Student, Comment, Lecturer, Content
+
+Attributes: 
++ id, name, password, unit code, unit name, replies (reply), authorisation.
+
+### 3b initial UML class diagram 
+[==重点Initial Class Diagram==](#==重点Initial%20Class%20Diagram==)
+> (b) Develop an initial UML class diagram for the system, with the relevant classes and attributes resulting from your dictionary of abstractions. Concentrate on modelling the problem domain rather than any boundary or control classes. Make sure you:
+>  include appropriate attributes for the classes
+>  describe the relationship between classes using generalization, association, aggregation and composition (as appropriate)
+>   indicate the multiplicity (cardinality) of the relationships properly.
+>    DO NOT include responsibilities or operations. You do not have all the information at this point to do so
+
+![](pic/Pasted%20image%2020221029152323.png)
+
+## question 4 
+> Based on the initial class diagram you have produced for Question 3 and the use case scenario in Question 2, produce a sequence diagram to show the messages exchanged between objects needed to carry out the Add Student use case scenario
+### 4a sequence diagram
+ [==重点Sequence_diagram==](#==重点Sequence_diagram==)
+![](content/img4%201.jpg)
+
+## question 5 statechart diagram
+### scenario
+> After some discussions inside the company, it was decided that the commenting feature should be enhanced to make it more useful. An informal description of the new feature was documented below.
+> “A ==user can create comments about any content== in Poodle 2. The comment is ==publicly visible by default==. However, the ==author of the comment can subsequently make the comment visible only to a group of users==.
+> A ==comment can be reported by a user== if she deems it to be inappropriate, irrelevant or not useful. Once reported, a ==comment can be deleted by a member of the teaching staff or a system administrator.== An accidentally ==deleted comment can be subsequently restored by a member of the teaching staff or an administrator==.
+> A ==comment can also be promoted by a member of the teaching staff== if it is deemed to be highly informative, relevant or useful. A ==promoted comment cannot be reported, nor can it be deleted.==
+> However, if the ==content itself is deleted, all comments associated with this content will be permanently deleted.==”
+
+### 5a state chart diagram
+ [==重点选考UML state chart==](#==重点选考UML%20state%20chart==)
+> Develop a UML statechart diagram as a precise representation of the above informal specification of the enhanced commenting feature. When there is ambiguity in the informal specification, clarify it by stating your assumptions explicitly (separately from the statechart diagram)
+
+![](pic/Pasted%20image%2020221028210257.png)
+
+## question 6 etheic
+> Having completed a few features with tight schedules, your talent had finally been recognised by the founders of SmartComputing with good recommendations from your team leader.
+> One week before the project deadline, the Chief Technical Officer (CTO) called your team leader into her office and showed him a piece of functionality implemented in the latest version of a competitor’s software, Noodle. The CTO said, “This is a feature we must have! Please ask the team to implement it by the end of the week so that we can demo the feature to the university.”
+> You were asked by your team leader to start designing it. After thinking for a couple of hours, you came to the conclusion that Poodle 2 was so different from Noodle that this feature simply didn’t make sense for Poodle 2. Moreover, it was not only difficult to implement, it would also make the system less reliable. You went back to the team leader to discuss these issues with him. The team leader then had a meeting with the CTO and explained your concerns to her.
+> After hearing the team leader’s explanation, the CTO was still adamant about including the feature in Poodle 2. To convince the team leader that it was easy to implement, she showed him the source code of Noodle, which is free and open-source, and asked him to “just copy their code then you’re done!” The team leader went ahead, followed her suggestions and completed the implementation on time for the demo
+
+### 6a ethical 
+[==重点software Engineering Code of Ethic==](#==重点software%20Engineering%20Code%20of%20Ethic==)
+> What are the ethical and professional issues that arise with the behaviour of the CTO and the team leader in this situation? How would you evaluate their behaviours? In your answer, you must refer to the applicable parts of the Software Engineering code of ethics
+
+Team leader (and I) did the right thing initially because we try to raise the initial concerns with the CTO. We tried to adhere to the following clauses:
++ 2.06 Identify, document, collect evidence and report to the employer promptly if, in their opinion, a project is likely to be problematic.
++ 3.10 Ensure adequate testing, debugging and review of software and related documents on which they work
+
+However, after the initial meeting CTO as well as the team leader did not take care of the issue with free and open source software:
++ § “Open Source” doesn’t necessarily mean you can reuse portions of the code for your work.
++ § They need to find out what OS (Open Source) license the author has before they can reuse and copy.
+
+They are therefore in breach of the following clauses:
++ 2.02 Not knowingly use software that is obtained or retained either illegally or unethically.
++ 3.03 Identify, define and address ethical, economic, cultural, legal and environmental issues related to work projects.
++ 3.05 Ensure an appropriate method is used for any project on which they work or propose to work
++ 3.13 Be careful to use only accurate data derived by ethical and lawful means, and use it only in ways properly authorised.
+
+By telling the team leader to go ahead and copy, CTO has also breached the following management clauses:
++ 5.01 Ensure good management for any project on which they work, including effective procedures for promotion of quality and reduction of risk (This risk is breaking IP law!)
++ 5.11 Not ask a software engineer to do anything inconsistent with this Code
++ 8.08 Not influenced others to undertake any action that involves a breach of the Code
+
+By right, the team leader should:
++ 6.12 Express concerns to the people involved when significant violations of this Code are detected
+
+Therefore, they both should go find out about the legality issues with Open Source, because they should:
++ 8.05 Improve their knowledge of relevant standards and the law governing the software and related documents on which they work,
 
 ##  question 7 workflow
 ###  scenario
-> The SmartSolutions software company had a contract with a transportation company, TransCo, to add a new component to their existing scheduling tool. The new component was to be a smart reasoning component for recommending routes to drivers. After the first version was delivered, TransCo decided that the new component would have to contain more features to allow maximum flexibility for users (“event 1”).
-> After incorporating these and the second version was delivered, SmartSolutions found out that the company producing the constraint solver library that it was using had gone broke, so it needed to change the design to use a different library(“event 2”).
-> Then SmartSolutions realized its own analysts had misunderstood one of TransCo’s requirements, so they had to re-do some of the analysis (“event 3”).
+> The SmartSolutions software company had a contract with a transportation company, TransCo, to add a new component to their existing scheduling tool. The new component was to be a smart reasoning component for recommending routes to drivers. After the first version was delivered, TransCo decided that the new component would have to ==contain more features== to allow maximum flexibility for users (“event 1”).
+> After incorporating these and the second version was delivered, SmartSolutions found out that the company producing the constraint solver library that it was using had gone broke, so it needed to ==change the design== to use a different library(“event 2”).
+> Then SmartSolutions realized its own analysts had misunderstood one of TransCo’s requirements, so they had to ==re-do some of the analysis== (“event 3”).
 > Below is an “empty” depiction of the Unified Process. Extend the figure to represent (roughly) the relative effort given to the different workflows during this project. Indicate on the x (time) axis roughly when “event 1”, “event 2” and “event 3” occurred
 > ![](content/Pasted%20image%2020221030203525.png)
-## workflow [==必考Workflows==](#==必考Workflows==)
+### 7a workflow 
+[==必考Workflows==](#==必考Workflows==)
+normal flow
+![](content/Pasted%20image%2020221030225433.png)
+event 1 requirement  change
+![](content/Pasted%20image%2020221030225521.png)
+event 2 design change
+![](content/Pasted%20image%2020221030225721.png)
+event 3 analysis change
 ![](content/Pasted%20image%2020221030194104.png)
+
+## question 8 testing
+> Suppose that you are a software engineer working on a car simulation system. You are given the pseudocode for the drive method in the Driver class
+
+ ![](content/testcode%201.png)
+### 8.a testing
+[==重点WEEK 11 Software Testing==](#==重点WEEK%2011%20Software%20Testing==)
+> Write a set of 10 test cases for glass box unit testing of the drive() method.
+
+![](content/img4%202.jpg)
+
+## Question 9 no/functional requirement
+> You are a software engineer working on an online shopping application. Web customers can browse items, but has to register the first time they make a purchase. When making a purchase, the customer can go back at any time and view the items in their shopping basket. When they proceed to the “checkout” phase, the system allows them the option of paying by credit card (which means the system has to connect to a credit payment service), or by PayPal. A separate database system will store all the customer registration information
+
+### 9a no/functional requirement 
+[Week 2 Requirements engineering](#Week%202%20Requirements%20engineering)
+> Below are 3 of the requirements, written in English. Each of these is not well-written (well-written requirements should be precise, unambiguous, complete and consistent.) For each
+> (i) indicate whether this is a functional or non-functional requirement (1 mark)
+> (ii) re-write the requirement (2 marks)
+
+(a) “When customers register they have to provide a password, which must be a ‘strong’
+one.”
++   functional requirement
++ (Note: what is meant by strong password?) 
++ When users register they must provide a password, which should be comprised of at least 8 characters, at least one of which numeric or taken from the following set: '-', '_', '.', '$', '#'
+
+(b) “The shopping website has to work on all the main web browsers.”
++ non-functional requirement
++ (Note: “work”? which browsers?)
++ The shopping website must display and react to user input in the same manner on the following browsers: IE7+, Firefox 3.x+, Safari 4.x.
+
+(c) “Customers will be able to search for items”
++ functional requirement
++ (Note: simple or more complex search?)
++ Customers will be able to search for items in the database by entering a query either including the name or the brand of the product. The system will display all results in a list.
 
 
 # Extra exercise
 
 ![](pic/Pasted%20image%2020221028221618.png)
-## 1. functional requirement select some function and write down: [Functional requirements](#Functional%20requirements) 
+## 1. functional requirement select some function and write down: 
+[Functional requirements](#Functional%20requirements) 
 + download photo
 + system read photo
 + tag
 + upload
 + watermark
 
-## 2. Non functional requirement:[Non-functional requirements](#Non-functional%20requirements)
+## 2. Non functional requirement:
+[Non-functional requirements](#Non-functional%20requirements)
 + colour theme can be switch for easier reading
 + API linked  to system
 + flag design icon to show different options
 + system accept file type
 
 
-## 3. User story [==必考User stories==](#==必考User%20stories==)
+## 3. User story
+ [==必考User stories==](#==必考User%20stories==)
 + 功能性需求选择来写
 + as a staff, i want to add a watermark so that user can identify their photo
 + as a user, i want to upload photo to the cloud so that i can view the photo in different device anywhere anytime
 
 
-## 4. Acceptance criteria [==必考Acceptance criteria==](#==必考Acceptance%20criteria==)
+## 4. Acceptance criteria
+ [==必考Acceptance criteria==](#==必考Acceptance%20criteria==)
 
 >  as a staff, i want to add a watermark so that user can identify their photo
 
@@ -802,7 +954,8 @@ Solutions (reasonable exceptions include (but not limited to):
  Acceptance criteria 2
 + d
 
-## 5. Initial class diagram 20pts [==重点Initial Class Diagram==](#==重点Initial%20Class%20Diagram==)
+## 5. Initial class diagram 20pts 
+[==重点Initial Class Diagram==](#==重点Initial%20Class%20Diagram==)
 + desktop user client staff system
 + ![](pic/Pasted%20image%2020221029115600.png)
 + api
@@ -813,7 +966,8 @@ Solutions (reasonable exceptions include (but not limited to):
 [My Initial class diagram in lucidchart](https://lucid.app/lucidchart/a4026035-3501-4a58-bd72-e21ef3b3d8c3/edit?viewport_loc=-324%2C159%2C2281%2C1036%2C0_0&invitationId=inv_3d939728-1cf9-48da-8b9b-8975c434fd64
 )
 
-## 6. Sequence diagram 20 pts [==重点Sequence diagram==](#==重点Sequence_diagram==)
+## 6. Sequence diagram 20 pts 
+[==重点Sequence diagram==](#==重点Sequence_diagram==)
 
 ![](pic/Pasted%20image%2020221029124320.png)
 ![](pic/Pasted%20image%2020221029150951.png)

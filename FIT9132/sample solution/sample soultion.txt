@@ -1,0 +1,401 @@
+select
+    cust_no,
+    cust_name,
+    cust_phone,
+    to_char(veh_year, 'yyyy') || ' ' || veh_make || ' ' || ' ' || veh_model as VEICLEDETAILS
+from
+    MA.vehicle
+    natural join MA.customer
+where
+    to_char(veh_year, 'yyyy') < (select to_char(sysdate, 'yyyy') from dual)
+    and (veh_make = 'Mazda' or veh_make = 'Ford')
+order by
+    cust_no, VEICLEDETAILS;
+
+select
+    p.part_code,
+    part_description,
+    nvl(sum(pc_quanlity), 0) as quanlity_used,
+    to_char(sum(pc_linecost), '$990.99') as total_amount_charge
+    
+from
+    MA.part p
+    left join MA.part_charge pc on pc.part_code = p.part_code
+group by
+    p.part_code,
+    part_description
+order by
+    quanlity_used;
+    
+    
+select
+    s.cust_no,
+    cust_name,
+    serv_no,
+    serv_req_pickup,
+    serv_ready_pickup,
+    floor((ser_ready_picjup - serv_req_pickup) * 24) || 'hr' || floor((( serv_ready_pickup - serv_req_pickup) * 24)) * 60 || 'min' as latency_time
+from
+    MA.service s
+    join MA.customer c on s.cust_no = c.cust_no
+where
+    serv_ready_pickup is not null
+    and ser_read_pickup > serv_req_pickup
+order by
+   latency_time desc
+
+
+Simple - an attribute which cannot be subdivided eg. employeeid, department number 
+Composite - an attribute which can be subdivided into additional attributes eg. employee name, home address 
+Multivalued - an attribute which has many potential values eg. qualification, skill
+
+
+single_value attribute can have only one value
+muti_valued ---- many ----
+
+
+List of symbols for copying/pasting as you enter your answers below:
+project: π, select: σ , join: ⨝, intersect ⋂, union ⋃, minus -
+
+(a) (a) Show the paper title, journal title, and month and year of journal publication for all papers published before 2012. (3 marks) R1 = π journal_id, journal_title, journal_month, journal_year (σ journal_year < 2012 (JOURNAL)) R2 = π journal_id, paper_title (PAPER) R3 = R1 ⨝ R2 R = π paper_title, journal_title, journal_month, journal_year (R3) Here R1 could be done in two steps, a select and then a project.
+
+(b)R1 = π author_id (σ authorpaper_position = 1 (AUTHOR_PAPER)) R2 = π author_id (AUTHOR) - R1 R3 = AUTHOR ⨝ R2 R4 = π author_name (R3)
+
+(c)R1 = π journal_id (σ journal_tile = ‘Big Data Research’ and journal_month = ‘May’ and journal_year = 2022 (JOURNAL)) R2 = π paper_id, paper_title (PAPER ⨝ R1) R3 = π author_id, paper_title (π author_id, paper_id(AUTHOR_PAPER) ⨝ R2) R4 = π paper_title, author_name (AUTHOR ⨝ R3)
+
+1
+List the employee number, the employee name, the employee job and the yearly salary of all
+employees that belong to the ‘Sales’ department. The name of the employee must be shown in a
+column called “Employee Name” and the yearly salary must be shown in the form of $34,200 in a
+column called “Yearly Salary”. Show the employee with the highest salary first, if two employees
+have the same salary, order it based on the employee number.
+Code the SQL SELECT statement.
+SELECT
+
+e.empno,
+
+empname AS "Employee Name",
+
+empjob,
+
+to_char(empmsal * 12, '$99,990') AS "Yearly Salary"
+
+FROM
+
+payroll.employee e
+
+JOIN payroll.department d
+
+ON e.deptno = d.deptno
+
+WHERE
+
+upper(deptname) = upper('Sales')
+
+ORDER BY
+
+empmsal DESC,
+
+e.empno;
+
+2
+For each course which has been completed by at least 5 employees, list the course code, the
+course description and the course duration. The course duration must be shown in a column called
+“Course Duration” and include the word ‘days’ (e.g. 4 days). Order the output by the course code.
+Code the SQL SELECT statement.
+
+SELECT
+
+c.crscode,
+
+crsdesc,
+
+crsduration || ' days' as "Course Duration"
+
+FROM
+
+payroll.registration r
+
+JOIN payroll.course c
+
+ON r.crscode = c.crscode
+
+WHERE
+
+r.regevaluation IS NOT NULL
+
+GROUP BY
+
+c.crscode,
+
+crsdesc,
+
+crsduration
+
+HAVING
+
+COUNT(empno) >= 5
+
+ORDER BY
+
+c.crscode;
+
+3
+List ALL employees whose total course registrations are less than the average number of
+registrations for employees who have registered for a course. Note that some employees may
+repeat a course, this repeat does not count as a different course. In the list, include the employee
+number, name, date of birth and the number of different courses they have registered for. Order the
+output by employee number.
+Code the SQL SELECT statement.
+
+SELECT
+
+e.empno,
+
+empname,
+
+to_char(empbdate, 'dd-Mon-yyyy') AS dob,
+
+COUNT(DISTINCT crscode) AS crscount
+
+FROM
+
+payroll.employee e
+
+LEFT JOIN payroll.registration r ON e.empno = r.empno
+
+GROUP BY
+
+e.empno,
+
+empname,
+
+to_char(empbdate, 'dd-Mon-yyyy')
+
+HAVING
+
+COUNT(DISTINCT crscode) < (
+
+SELECT
+
+AVG(COUNT(DISTINCT crscode))
+
+FROM
+
+payroll.registration
+
+GROUP BY
+
+empno
+
+)
+
+ORDER BY
+
+e.empno;
+4
+List, for all employees who have had more than four appointments within the company, the
+employee number, their name and how many appointments they have had - note that one row in
+the history table represents an appointment.
+Also list, as part of the output, the percentage of the employees appointments which contain a
+history comment, the yearly salary they started with for their first appointment and their current
+yearly salary. You may assume that all salaries in the system are rounded to the nearest whole
+number. Order the output by employee number.
+Your output MUST have the form as shown below:
+SELECT
+
+h.empno,
+
+e.empname,
+
+COUNT(*) AS numb_appoints,
+
+lpad(to_char(COUNT(h.histcomments) * 100 / COUNT(*), '990.9')
+
+|| '%', 20) AS percent_with_comment,
+
+(
+
+SELECT
+
+histmsal * 12
+
+FROM
+
+payroll.history
+
+WHERE
+
+histbegindate = (
+
+SELECT
+
+MIN(histbegindate)
+
+FROM
+
+payroll.history
+
+WHERE
+
+empno = h.empno
+
+)
+
+AND empno = h.empno
+
+) AS starting_yearly_salary,
+
+e.empmsal * 12 AS current_yearly_salary
+
+FROM
+
+payroll.history h
+
+JOIN payroll.employee e
+
+ON h.empno = e.empno
+
+GROUP BY
+
+h.empno,
+
+e.empname,
+
+e.empmsal
+
+HAVING
+
+COUNT(*) > 4
+
+ORDER BY
+
+empno;
+
+5
+"_id": 7782,
+"name": {
+"initial": "AB",
+"familyName": "CLARK"
+},
+"department": "ACCOUNTING",
+"job": "MANAGER",
+"birthdate": "09-06-1982",
+"courseInfo": [
+{
+"code": "JAV",
+"description": "Java for Oracle developers",
+"date": "13-12-2016",
+"evaluation": 5
+}
+]
+}
+]
+Write an SQL statement that generates the above json formatted data from the tables owned by
+the user PAYROLL on the Oracle database.
+SELECT
+
+JSON_OBJECT( '_id' VALUE e.empno,
+
+'name' VALUE JSON_OBJECT(
+
+'initial' VALUE empinit,
+
+'familyName' VALUE empname
+
+),
+
+'department' VALUE deptname,
+
+'job' VALUE empjob,
+
+'birthdate' VALUE to_char(empbdate,'dd-mm-yyyy'),
+
+'courseInfo' VALUE JSON_ARRAYAGG(
+
+JSON_OBJECT(
+
+'code' VALUE r.crscode,
+
+'description' VALUE crsdesc,
+
+'date' VALUE to_char(offbegindate,'dd-mm-yyyy'),
+
+'evaluation' VALUE regevaluation
+
+)
+
+)
+
+FORMAT JSON )
+
+|| ','
+
+FROM
+
+
+
+PAYROLL.DEPARTMENT d
+
+JOIN PAYROLL.employee e
+
+ON d.deptno = e.deptno
+
+JOIN payroll.registration r
+
+ON e.empno = r.empno
+
+JOIN payroll.course c
+
+ON r.crscode = c.crscode
+
+GROUP BY
+
+e.empno,
+
+empinit,
+
+empname,
+
+deptname,
+
+empjob,
+
+empbdate
+
+ORDER BY
+
+e.empno;
+
+6
+to show the details of all employees in the ‘SALES’ department
+(a)db.employee.find({"department":"SALES"});
+
+(b) to show the initial and family name of all employees who had registered for the "Java for Oracle
+developers" course. 
+
+db.employee.find({"courseInfo.description":"Java for Oracle
+
+developers"},{"_id":0,"name.initial":1,"name.familyName":1});
+
+
+(c) to update the evaluation for R. Blake (id: 7698) registration to "Introduction to SQL" (code:
+“SQL”) course on the "13-12-2016". The new value for the evaluation is 3. [4
+
+
+db.employee.updateOne({$and:[{"_id":7698},{"courseInfo.code": "SQL"},
+
+{"courseInfo.date":"13-12-2016"}]},{$set:{"courseInfo.$.evaluation": 3}});
+
+
+(a)(a) Serial – all of one transaction followed by all of the other T1 R(X), T1 W(X), T2 R(Y), T2 W(Y), T2 R(X), T2 W(X) 
+
+Non-Serial – interleaving of the transactions T1 R(X), T2 R(Y), T2 W(Y), T1 W(X), T2 R(X), T2 W(X)
+
+Isolation or Consistency
+
+T1 – nothing required, committed before checkpoint
+T2 – ROLL FORWARD, committed after checkpoint and before fail
+T3 – ROLL BACK, never reached commit
+T4 – ROLL FORWARD, started after checkpoint committed before fail
+T5 - ROLL BACK, never reached commit
