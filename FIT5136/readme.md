@@ -482,9 +482,17 @@ content in  week6 FLUX.pdf
 ![](pic/Pasted%20image%2020220917130108.png)
 
 ## ==重点software Engineering Code of Ethic==
++ 找到几种人
++ 定义每个人的行为
++ ethical ? professional? legal?
++ if good  code of ethic
++ if bad where bad and violate which aspect
++ each action evaluate within 2 code
 
-to address the complexity of  moral issues 解决道德问题的复杂性 
+ACM SE ethics code
 https://ethics.acm.org/code-of-ethics/software-engineering-code/
+to address the complexity of  moral issues 解决道德问题的复杂性 
+
 1. ==PUBLIC== Software engineers shall act consistently  with the ==public interest== 软件工程师的行为应符合公共利益
 2. ==CLIENT AND EMPLOYER== Software engineers shall act  in a manner that is in the ==best interests of their client and  employer== consistent with the public interest 软件工程师的行为方式应符合其客户和雇主的最大利益，并符合公共利益
 3. ==PRODUCT== Software engineers shall ensure that their products and related modifications ==meet the highest professional standards possible==. In particular, software engineers shall, as appropriate 软件工程师应确保他们的产品和相关修改符合最高的专业标准。特别是，软件工程师应酌情
@@ -824,17 +832,17 @@ Attributes:
 
 ## question 6 etheic
 > Having completed a few features with tight schedules, your talent had finally been recognised by the founders of SmartComputing with good recommendations from your team leader.
-> One week before the project deadline, the Chief Technical Officer (CTO) called your team leader into her office and showed him a piece of functionality implemented in the latest version of a competitor’s software, Noodle. The CTO said, “This is a feature we must have! Please ask the team to implement it by the end of the week so that we can demo the feature to the university.”
-> You were asked by your team leader to start designing it. After thinking for a couple of hours, you came to the conclusion that Poodle 2 was so different from Noodle that this feature simply didn’t make sense for Poodle 2. Moreover, it was not only difficult to implement, it would also make the system less reliable. You went back to the team leader to discuss these issues with him. The team leader then had a meeting with the CTO and explained your concerns to her.
-> After hearing the team leader’s explanation, the CTO was still adamant about including the feature in Poodle 2. To convince the team leader that it was easy to implement, she showed him the source code of Noodle, which is free and open-source, and asked him to “just copy their code then you’re done!” The team leader went ahead, followed her suggestions and completed the implementation on time for the demo
+> One week before the project deadline, the ==Chief Technical Officer (CTO)== called ==your team leader== into her office and showed him a piece of functionality implemented in the latest version of a competitor’s software, Noodle. The CTO said, “This is a feature we must have! Please ask the team to implement it by the end of the week so that we can demo the feature to the university.”
+> You were asked by your team leader to start designing it. After thinking for a couple of hours, you came to the conclusion that Poodle 2 was so different from Noodle that this feature simply didn’t make sense for Poodle 2. Moreover, it was not only difficult to implement, it would also make the system less reliable. ==You went back to the team leader to discuss these issues with him. The team leader then had a meeting with the CTO and explained your concerns to her (good).==
+> After hearing the team leader’s explanation, the CTO was still adamant about including the feature in Poodle 2. To convince the team leader that it was easy to implement, she showed him the ==source code of Noodle, which is free and open-source==, and asked him to ==“just copy their code then you’re done!”(bad illegal)== The team ==leader went ahead, followed her suggestions and completed the implementation on time for the demo==
 
 ### 6a ethical 
 [==重点software Engineering Code of Ethic==](#==重点software%20Engineering%20Code%20of%20Ethic==)
 > What are the ethical and professional issues that arise with the behaviour of the CTO and the team leader in this situation? How would you evaluate their behaviours? In your answer, you must refer to the applicable parts of the Software Engineering code of ethics
 
 Team leader (and I) did the right thing initially because we try to raise the initial concerns with the CTO. We tried to adhere to the following clauses:
-+ 2.06 Identify, document, collect evidence and report to the employer promptly if, in their opinion, a project is likely to be problematic.
-+ 3.10 Ensure adequate testing, debugging and review of software and related documents on which they work
++ 2.06 Identify, document, collect evidence and report to the employer promptly if, in their opinion, a project is likely to be problematic.(报告问题)
++ 3.10 Ensure adequate testing, debugging and review of software and related documents on which they work （专业判断）
 
 However, after the initial meeting CTO as well as the team leader did not take care of the issue with free and open source software:
 + § “Open Source” doesn’t necessarily mean you can reuse portions of the code for your work.
@@ -844,11 +852,11 @@ They are therefore in breach of the following clauses:
 + 2.02 Not knowingly use software that is obtained or retained either illegally or unethically.
 + 3.03 Identify, define and address ethical, economic, cultural, legal and environmental issues related to work projects.
 + 3.05 Ensure an appropriate method is used for any project on which they work or propose to work
-+ 3.13 Be careful to use only accurate data derived by ethical and lawful means, and use it only in ways properly authorised.
++ 3.13 Be careful to use only accurate data derived by ethical and lawful means, and use it only in ways properly authorised. (copy code)
 
 By telling the team leader to go ahead and copy, CTO has also breached the following management clauses:
 + 5.01 Ensure good management for any project on which they work, including effective procedures for promotion of quality and reduction of risk (This risk is breaking IP law!)
-+ 5.11 Not ask a software engineer to do anything inconsistent with this Code
++ 5.11 Not ask a software engineer to do anything inconsistent with this Code (copy code)
 + 8.08 Not influenced others to undertake any action that involves a breach of the Code
 
 By right, the team leader should:
@@ -910,11 +918,46 @@ one.”
 + (Note: simple or more complex search?)
 + Customers will be able to search for items in the database by entering a query either including the name or the brand of the product. The system will display all results in a list.
 
+# Extra exercise css
+## c1 use case diagram one
+> a. The computer shop sells laptops and desktops
+> b. You can search and buy a product based on brand, memory, screen size, price, and/or VGA cards
+> c. You can borrow a device on rent
+> d. You can buy a device on loan, in addition to other payment methods
+> e. A customer can sell products, review a product, request to assemble a device
+> f. Admin can manage products and customers
 
-# Extra exercise
+[==重点USE CASE DIAGRAMS==](#==重点USE%20CASE%20DIAGRAMS==)
+
+## c2 use case scenario
+> a. Write a use case scenario on “Loan a device” with exception conditions
+> a. Write a use case scenario on “Review a product” with exception condition
+
+[Use case scenario](#Use%20case%20scenario)
+
+## c3 sequence diagram
+>  b. Draw a sequence diagram on the above-mentioned use case
+
+[==重点Sequence_diagram==](#==重点Sequence_diagram==)
+
+## c4  statechart
+> d. Draw a statechart on the above-mentioned use case
+
+[==重点选考UML state chart==](#==重点选考UML%20state%20chart==)
+
+## c5 initial class diagram on CSS
+[==重点Initial Class Diagram==](#==重点Initial%20Class%20Diagram==)
+
+## c6 black box test cases
+> 6. Write black box test cases on Loan a device and review a product use cases
+
+[==重点WEEK 11 Software Testing==](#==重点WEEK%2011%20Software%20Testing==)
+
+# Extra exercise two
 
 ![](pic/Pasted%20image%2020221028221618.png)
-## 1. functional requirement select some function and write down: 
+## e1. functional requirement 
+select some function and write down: 
 [Functional requirements](#Functional%20requirements) 
 + download photo
 + system read photo
@@ -922,7 +965,7 @@ one.”
 + upload
 + watermark
 
-## 2. Non functional requirement:
+## e2. Non functional requirement:
 [Non-functional requirements](#Non-functional%20requirements)
 + colour theme can be switch for easier reading
 + API linked  to system
@@ -930,14 +973,14 @@ one.”
 + system accept file type
 
 
-## 3. User story
+## e3. User story
  [==必考User stories==](#==必考User%20stories==)
 + 功能性需求选择来写
 + as a staff, i want to add a watermark so that user can identify their photo
 + as a user, i want to upload photo to the cloud so that i can view the photo in different device anywhere anytime
 
 
-## 4. Acceptance criteria
+## e4. Acceptance criteria
  [==必考Acceptance criteria==](#==必考Acceptance%20criteria==)
 
 >  as a staff, i want to add a watermark so that user can identify their photo
@@ -954,7 +997,7 @@ one.”
  Acceptance criteria 2
 + d
 
-## 5. Initial class diagram 20pts 
+## e5. Initial class diagram 20pts 
 [==重点Initial Class Diagram==](#==重点Initial%20Class%20Diagram==)
 + desktop user client staff system
 + ![](pic/Pasted%20image%2020221029115600.png)
@@ -966,8 +1009,9 @@ one.”
 [My Initial class diagram in lucidchart](https://lucid.app/lucidchart/a4026035-3501-4a58-bd72-e21ef3b3d8c3/edit?viewport_loc=-324%2C159%2C2281%2C1036%2C0_0&invitationId=inv_3d939728-1cf9-48da-8b9b-8975c434fd64
 )
 
-## 6. Sequence diagram 20 pts 
+## e6. Sequence diagram 20 pts 
 [==重点Sequence diagram==](#==重点Sequence_diagram==)
 
 ![](pic/Pasted%20image%2020221029124320.png)
 ![](pic/Pasted%20image%2020221029150951.png)
+

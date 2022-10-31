@@ -26,7 +26,7 @@
       {
         "id": "e73561537bf77077",
         "type": "tabs",
-        "dimension": 82.22222222222221,
+        "dimension": 41.11111111111111,
         "children": [
           {
             "id": "e36058bc90a23433",
@@ -36,24 +36,34 @@
               "type": "markdown",
               "state": {
                 "file": "FIT5136/readme.md",
-                "mode": "preview",
-                "source": false
+                "mode": "source",
+                "source": true
               },
               "pinned": true
             },
             "group": "1303d9acc50f72bc"
-          },
+          }
+        ]
+      },
+      {
+        "id": "1fb423b36c52a8d3",
+        "type": "tabs",
+        "dimension": 41.11111111111111,
+        "children": [
           {
-            "id": "3c4c14b400bf1a58",
+            "id": "0d7ae857f592f5b3",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "FIT5136/readme.md",
-                "mode": "source",
-                "source": false
-              }
-            }
+                "mode": "preview",
+                "source": true
+              },
+              "pinned": true
+            },
+            "group": "1303d9acc50f72bc"
           }
         ]
       }
