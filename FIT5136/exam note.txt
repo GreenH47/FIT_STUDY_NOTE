@@ -1,0 +1,78 @@
+The TealByte Pty Ltd is a traditional Gym Company. It specialised in providing onsite gym classes and sports equipment and space to train. The company recently want to get into the online market as well. You are a newly recruited software engineer who is going to be working with the rest of the IT teams to create desktop-based software to handle the online class scheduling process.
+
+For now, you are in charge of the following feature:
+
+Trainer will be able to log in and they will be greeted with a calendar after login. The communication between the trainer and server needs to be secured using SSL Certificate. All the screens need to be able to load within 2 seconds. The calendar will include all the past and current bookings of the classes as well as any empty slots available to put the new classes in. It will also show the number of students signed up to come to the training and prediction chart based on how many actually came to the session. There are a few buttons to help the trainer navigate quickly to the different functionalities related to the booking. The interface of the dashboard element needs to be with a minimalistic look. 
+
+1a)
+6 Marks
+Based on the feature you are going to work on, please write THREE user stories associated with this feature.
+
+1b)
+4 Marks
+Please write TWO non-functional requirements of the feature from the case study
+
+2 25pts
+The software must be able to store all trainer & trainee details as well as create new calendar events for training. 
+
+The system must keep track of the trainer's scheduled training event name, the event date time, duration and the location of the training event. The trainer & trainee's email address and password, trainer's ABN (Australia business number), trainer name, and type of exercise the trainer is good at, and starting date of their first job, the calendar events will include the music genre users (trainer + trainee) like to listen to as well as the music name and music creator together with the event date time and lastly each trainee's availability plus their preferred mode of exercise (cardio, muscle). 
+
+There can be multiple music users (trainer + trainee) can pick within one training event, and one trainer is going to take care of at least 10 trainees up to 20. If there are no trainees available, the calendar event won't be able to be created and vice versa. The music is shared by both trainer and trainee. If there is a clash between the locations within the venue booked, the trainer will be warned and they will need to change the date and time of the training.  
+
+For trainees, they can see an achievement page, indicating the number of classes they have attended, the total amount of hours the trainee has experienced, and the estimated total number of calories the trainee has spent
+
+The system will keep an internal log that captures every trainer and trainee action based on the type. The type includes the viewing history (what screen the trainer/trainee has checked etc), the click history (what buttons or navigations the trainers/trainee has clicked etc), and login/logout history (when did the trainer and trainee login and logout from the system).
+
+
+Required Task
+
+Develop an initial class diagram for the course management system described above, with the relevant classes and attributes.
+
+
+Make sure you:
+
+i) Include the classes identified
+ii) Include appropriate attributes for the classes
+iii) Describe the relationship between classes using generalisation, association and aggregation
+iv) Represent the multiplicity of the relationships properly
+v) Represent the direction of all the multiplicities
+
+3 20pts
+Looking back at the system, when a trainer trying to organise a training session, they will firstly login into the system, and then navigate from the home screen's calendar to the actual training creation page. Depending on which date and time the trainer has clicked, the date and time will be copied over to the training creation page. The trainer will cross-check the date they preferred and see how many trainees are available. If there are at least 10 trainees available during that time, the trainer will continue to proceed with creation. otherwise, the trainer will either cancel the creation process or go back and choose another date or time. The trainer will be able to see the trainee's music and their own ones, they can pick the one they like or choose from the trainee's music. After the trainer created the training session, the system will send an email to all available trainees from external 3rd party software requesting RSVP (Répondez s'il vous plaît, literally meaning "Respond, if you please"), and then the trainee will log in to the system and respond to help trainer have better idea of the attendance level of the classes. 
+
+Required Tasks
+
+
+Develop a state chart diagram as a precise statement of the informal specification of the "Scheduling a training session process" provided above.
+
+
+TealByte IT team, after finishing reviewing the initial class diagram (ICD) you produced and discussing the specifications, decided they wanted to incorporate a new feature to auto-generate the music list together with the music and share with both trainer and trainee based on the duration of the training and the type of training (Cardio or Muscle). ("Event 1"). 
+
+After analysing the changes, TealByte IT Team started to design the business process. However, during the designing phase, the legal department informed them that in regard to the music list functions, the copyright information provided by the IT team is related to DMCA* act, but there is a difference between the legal jurisdictions between Australian copyright law and the information IT team obtained from DMCA act. Upon revisiting the copyright law, The IT team decided to keep the music list internal and add references to the music using MeTube so that they can avoid music license issues. ("Event 2")
+
+*DMCA (The Digital Millennium Copyright Act belongs to the United States)
+
+Required Task
+
+Below is an “empty” depiction of the Unified Process as used in the unit. Represent (roughly) the relative effort given to the different workflows during this project. Please indicate on the x (time) axis roughly when “event 1” and “event 2” occurred.
+
+You and your team have finished developing the software, and 2 days before releasing the software, you suddenly realised that there is no SSL certificate encrypting the communication between the staff and the server. All the message that is going to be transferred is shown as plain text. Moreover, you noticed the achievement page function developed by one of the other team members is using a plugin that is pirated. You immediate reported to your supervisor, and your supervisor is surprised but then after discussion with the CEO, he told you that because this is more internally used within the gym itself, the company is fine with not purchasing SSL certificate and using a pirated version of the plugin since nobody is going to know besides the management and software engineers. There is nothing he can do. 
+
+You insist this could cause issues in the future, and want to further escalate the issue and disclose this information to the public, your supervisor instead advises you that if you wish to report, your time in this company is going to be much shorter than you expected, and then proceed with removing you from the company with a reason indicating you are not mentally stable and causes potential harm to company properties and violation of NDA policy.
+6a)
+4 Marks
+Identify all the ethical and unethical instances in the case study.
+6b)
+12 Marks
+What are the ethical and professional issues that arise with the behaviour of XXXX, YYYY etc (i.e., every character in the case study)? How would you evaluate their behaviours (i.e., good and bad)? 
+
+In your answer, justify your evaluation by referring to the applicable principles and their clauses of the Software Engineering Code of Ethics. 
+
+For each of the ethics instances, please list out max 2 clauses. 
+6c)
+9 Marks
+Please list out what suggestions you would make to this situation
+
+In your answer, justify your suggestions by referring to the applicable principles and their clauses of the Software Engineering Code of Ethics. 
+
+Please list out Max 3 relevant code of ethics clauses

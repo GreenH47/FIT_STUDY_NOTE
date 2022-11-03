@@ -522,3 +522,23 @@ Justification
 
 ### part of my outline
 ![](pic/Pasted%20image%2020221024211324.png)
+
+
+# week 12
+## Assessed Exercise (Week 12) “Reporting with an impact declaration
+### scenario
+> in this part of the assignment your task is to fill in a simple ‘Impact Declaration’ that will accompany your video plan and your final video.
+> This form summaries the potential impact of the IP and will be used by the Business Development team to decide how to approach relevant investors.
+
+### how to do it
++ SUMMARY / BACKGROUND (max 50 words) 详细的背景摘要，对研究及其结果进一步描述
++ WHAT IS THE PROBLEM BEING TACKLED? (max 50 words) 问题陈述。我们用这项科技想要解决的问题是什么？
++ WHAT IS THE POTENTIAL SOLUTION / APPLICATION FOR A PARTNER? (max 50 words) 潜在的解决方案和应用 这项科技如何解决问题的以及如何应用这项技术。
++ WHAT IS THE IMPACT/HOW DOES IT MAKE THE INDUSTRY PARTNER SUCCESSFUL (max 50 words) e.g. Social good, ROI (cost savings) efficiency/productivity), What would they be interested in on a commercial level? What’s in it for them? E.g, How will they reach their KPI’s, sales targets 会对投资者在商业方面产生什么影响。主要考虑他们在商业方面如 何获利。比如社会影响（公益），利润变高（成本降低/提高生产率）
++ WHAT IS THE TECHNOLOGY BEING USED? (max 50 words) 把这项技术中使用到的所有技术都列举出来。 比如：监视功能，语音收集功能，匿名技术，分析技术等。
++ IS THERE POTENTIAL TO PATENT THIS WORK? (max 50 words) Do you think this idea should be patented, briefly explain your answer? 这项技术是否可以申请专利？ 首先说是/否。 其次，说明专利的政策：新颖性和实用性 Your invention must be unique and inventive or innovative in order to gain patent protection.发明必须是独特的，有创造力的 或创新的，才能获得专利保护。最后，分析你的科技是否具有这两个特性
++ potential CONFLICTS WITH EXISTING PRIOR ART? (max 50 words inc. links to prior) 该科技中是否存在现有技术。是否有人在某个时间之前已经描述或展示或做出了包含与本发明非常相似的技术用途的东西。本科技存在哪些现有技术。
++ WHAT IS THE COMMERCIAL POTENTIAL OF THIS RESEARCH? (max 50 words) Note this is different to patent, as work can be commercialised without having a patent  该技术的商业潜力。这与专利不同，因为无需专利就可以将作品商业化。往大了说，不要只关注该技术本身存在的行业而是关注于该技术的潜力。例如：它在未来可能会发展成应用于每个人生活中的技术，为什么。
++ WHICH INDUSTRIES CAN BENEFIT FROM THIS RESEARCH, WHY? (max 50 words) e.g. financial institutions, utilities, companies? 该技术可以使哪些行业受益。该技术可以应用的范围有多广泛。可以跨越哪些行业进行应用。公益，金融，医疗，教育等。
+
+
